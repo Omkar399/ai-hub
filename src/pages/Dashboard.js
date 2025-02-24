@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Typography, Card, CardContent, Tabs, Tab, Box } from '@mui/material';
-import { getUserBookmarks } from '../services/api';
+import { Container, Grid, Typography, Card, CardContent, Tabs, Tab, Box, Button } from '@mui/material';
+import { getUserBookmarks, deleteBookmark } from '../services/api'; // Import delete API
 
 const Dashboard = () => {
     const [bookmarks, setBookmarks] = useState([]);
@@ -10,12 +10,30 @@ const Dashboard = () => {
         fetchUserData();
     }, []);
 
+    // Fetch bookmarks data
     const fetchUserData = async () => {
         try {
             const bookmarksData = await getUserBookmarks();
             setBookmarks(bookmarksData);
         } catch (error) {
             console.error('Failed to fetch user data:', error);
+        }
+    };
+
+    // Handle bookmark deletion
+    const handleDeleteBookmark = async (bookmarkId) => {
+        try {
+            // Call API to delete bookmark
+            await deleteBookmark(bookmarkId);
+
+            // Update state by filtering out the deleted bookmark
+            setBookmarks((prevBookmarks) =>
+                prevBookmarks.filter((bookmark) => bookmark.id !== bookmarkId)
+            );
+
+            console.log(`Bookmark with ID ${bookmarkId} deleted successfully.`);
+        } catch (error) {
+            console.error('Failed to delete bookmark:', error);
         }
     };
 
@@ -31,6 +49,7 @@ const Dashboard = () => {
                 <Tab label="Notes" value="notes" />
             </Tabs>
 
+            {/* Bookmark Cards */}
             <Grid container spacing={3}>
                 {bookmarks.map((bookmark) => (
                     <Grid item xs={12} md={6} key={bookmark.id}>
@@ -40,6 +59,15 @@ const Dashboard = () => {
                                 <Typography color="textSecondary">
                                     {bookmark.description}
                                 </Typography>
+                                {/* Delete Button */}
+                                <Button
+                                    variant="contained"
+                                    color="error"
+                                    onClick={() => handleDeleteBookmark(bookmark.id)}
+                                    sx={{ mt: 2 }}
+                                >
+                                    Delete
+                                </Button>
                             </CardContent>
                         </Card>
                     </Grid>

@@ -69,6 +69,42 @@ export const getUserBookmarks = async () => {
     }
 }  
 
+  // Function to add a bookmark
+  export const addBookmark = async (resource) => {
+    try {
+        // Validate required fields
+        if (!resource.title || !resource.url) {
+            alert('Title and URL are required to add a bookmark.');
+            return;
+        }
+
+        // Construct payload
+        const payload = {
+            title: resource.title,
+            description: resource.description || resource.abstract || '',
+            url: resource.url || resource.link,
+            source: resource.source || 'local',
+            ...(resource.id && { resource_id: resource.id }),
+        };
+
+        // Log payload for debugging
+        console.log('Payload:', payload);
+
+        // Make POST request
+        const response = await axios.post('http://localhost:5000/api/bookmarks', payload, {
+            withCredentials: true,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        alert('Bookmark added successfully!');
+    } catch (err) {
+        console.error('Error adding bookmark:', err.response?.data || err.message);
+        alert(err.response?.data?.error || 'Failed to add bookmark.');
+    }
+};
+
 // Save a new bookmark
 export const saveBookmark = async (bookmarkData) => {
     try {
@@ -82,7 +118,7 @@ export const saveBookmark = async (bookmarkData) => {
 // Delete a bookmark by ID
 export const deleteBookmark = async (bookmarkId) => {
     try {
-        const response = await apiClient.delete(`/api/bookmarks/${bookmarkId}`);
+        const response = await apiClient.delete(`/api/bookmarks/${bookmarkId}`, { withCredentials: true});
         return response.data;
     } catch (error) {
         handleError(error);

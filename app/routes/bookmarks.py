@@ -13,20 +13,40 @@ def add_bookmark():
     Add a bookmark for the current user.
     """
     data = request.json
-    resource_id = data.get('resource_id')
+    resource_id = data.get('resource_id')  # For local resources
+    title = data.get('title')  # For external resources
+    description = data.get('description')
+    url = data.get('url')
+    source = data.get('source')
 
-    # Check if the resource exists
-    resource = Resource.query.get(resource_id)
-    if not resource:
-        return jsonify({"error": "Resource not found"}), 404
+    if not url or not title or not source:
+        return jsonify({"error": "Title, URL, and source are required"}), 400
 
-    # Check if the bookmark already exists
-    existing_bookmark = Bookmark.query.filter_by(user_id=current_user.id, resource_id=resource_id).first()
-    if existing_bookmark:
-        return jsonify({"message": "Bookmark already exists"}), 400
+    # Handle local resources with resource_id
+    if resource_id:
+        resource = Resource.query.get(resource_id)
+        if not resource:
+            return jsonify({"error": "Resource not found"}), 404
 
-    # Create a new bookmark
-    new_bookmark = Bookmark(user_id=current_user.id, resource_id=resource_id)
+        # Check if the bookmark already exists for local resources
+        existing_bookmark = Bookmark.query.filter_by(user_id=current_user.id, resource_id=resource_id).first()
+        if existing_bookmark:
+            return jsonify({"message": "Bookmark already exists"}), 400
+
+        new_bookmark = Bookmark(user_id=current_user.id, resource_id=resource_id, title=resource.title,
+                                description=resource.description, url=resource.url, source="local")
+
+    # Handle external resources (e.g., arXiv, PapersWithCode)
+    else:
+        # Check if the bookmark already exists for external resources by URL
+        existing_bookmark = Bookmark.query.filter_by(user_id=current_user.id, url=url).first()
+        if existing_bookmark:
+            return jsonify({"message": "Bookmark already exists"}), 400
+
+        new_bookmark = Bookmark(user_id=current_user.id, title=title, description=description,
+                                url=url, source=source)
+
+    # Save the new bookmark to the database
     db.session.add(new_bookmark)
     db.session.commit()
 
@@ -40,9 +60,19 @@ def get_bookmarks():
     Retrieve all bookmarks for the current user.
     """
     bookmarks = Bookmark.query.filter_by(user_id=current_user.id).all()
-    resources = [Resource.query.get(bookmark.resource_id).to_dict() for bookmark in bookmarks]
     
-    return jsonify(resources)
+    # Convert bookmarks to JSON format
+    results = []
+    for bookmark in bookmarks:
+        results.append({
+            "id": bookmark.id,
+            "title": bookmark.title,
+            "description": bookmark.description,
+            "url": bookmark.url,
+            "source": bookmark.source,
+        })
+
+    return jsonify(results)
 
 
 @bp.route('/bookmarks/<int:bookmark_id>', methods=['DELETE'])

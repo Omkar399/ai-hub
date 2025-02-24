@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { addBookmark } from '../services/api';
 
 const SearchPage = () => {
   const [results, setResults] = useState([]);
@@ -55,25 +56,24 @@ const SearchPage = () => {
     }
   };
 
-  // Function to add a bookmark
-  const addBookmark = async (resourceId) => {
-    try {
-        const response = await axios.post(
-          'http://localhost:5000/api/bookmarks',
-          { resource_id: resourceId },
-          {
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              withCredentials: true,
-          }
-      );
-      console.log(response.data);
-      alert('Bookmark added successfully!');
-    } catch (err) {
-      console.error(error.response?.data || error.message);
-      alert(error.response?.data?.error || 'Failed to add bookmark.')
+  // Helper function to map result fields based on the source
+  const mapResultFields = (result) => {
+    if (source === 'paperswithcode') {
+      return {
+        title: result.title,
+        url: result.code_url || result.repository_url, // Prefer code_url; fallback to repository_url
+        description: result.abstract || '', // Use abstract for description
+        source: 'paperswithcode',
+      };
     }
+
+    // Default mapping for other sources
+    return {
+      title: result.title,
+      url: result.url || result.link,
+      description: result.description || result.abstract || result.snippet || '',
+      source: source,
+    };
   };
 
   return (
@@ -112,39 +112,43 @@ const SearchPage = () => {
 
       {/* Results List */}
       <ul style={{ listStyleType: 'none', padding: '0', marginTop: '20px' }}>
-        {currentResults.map((result, index) => (
-          <li key={index} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
-            {/* Title as a Hyperlink */}
-            {result.url || result.link ? (
-              <h3 style={{ marginBottom: '5px' }}>
-                <a href={result.url || result.link} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF', textDecoration: 'none' }}>
-                  {result.title}
-                </a>
-              </h3>
-            ) : (
-              <h3 style={{ marginBottom: '5px' }}>{result.title}</h3>
-            )}
+        {currentResults.map((result, index) => {
+          const mappedResult = mapResultFields(result); // Map fields based on the source
 
-            {/* Abstract/Description */}
-            {result.abstract || result.description || result.snippet ? (
-              <p style={{ marginBottom: '5px', color: '#555' }}>
-                {result.abstract || result.description || result.snippet}
-              </p>
-            ) : null}
+          return (
+            <li key={index} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
+              {/* Title as a Hyperlink */}
+              {mappedResult.url ? (
+                <h3 style={{ marginBottom: '5px' }}>
+                  <a href={mappedResult.url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF', textDecoration: 'none' }}>
+                    {mappedResult.title}
+                  </a>
+                </h3>
+              ) : (
+                <h3 style={{ marginBottom: '5px' }}>{mappedResult.title}</h3>
+              )}
 
-            {/* Bookmark Button */}
-            <button onClick={() => addBookmark(result.id)} style={{
-              backgroundColor: '#007BFF',
-              color: '#fff',
-              borderRadius: '5px',
-              border: 'none',
-              padding: '8px',
-              cursor: 'pointer'
-            }}>
-              Bookmark
-            </button>
-          </li>
-        ))}
+              {/* Abstract/Description */}
+              {mappedResult.description && (
+                <p style={{ marginBottom: '5px', color: '#555' }}>
+                  {mappedResult.description}
+                </p>
+              )}
+
+              {/* Bookmark Button */}
+              <button onClick={() => addBookmark(mappedResult)} style={{
+                backgroundColor: '#007BFF',
+                color: '#fff',
+                borderRadius: '5px',
+                border: 'none',
+                padding: '8px',
+                cursor: 'pointer'
+              }}>
+                Bookmark
+              </button>
+            </li>
+          );
+        })}
       </ul>
 
       {/* Pagination Controls */}
