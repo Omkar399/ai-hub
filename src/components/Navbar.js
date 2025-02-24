@@ -16,18 +16,15 @@ const Navbar = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await logoutUser(); // Call the API to log out
-            
-            if (response.message === "Successfully logged out") {
-                localStorage.removeItem('user'); // Remove user data from localStorage
-                setIsAuthenticated(false); // Update authentication state
-                navigate('/login'); // Redirect to login page
-            }
+            await logoutUser(); // Call the API to log out
+            localStorage.removeItem('user'); // Remove user data from localStorage
+            setIsAuthenticated(false); // Update authentication state
+            navigate('/login'); // Redirect to login page
         } catch (error) {
-            console.error('Logout failed:', error.response?.data || error.message);
+            console.error('Logout failed:', error); // Log any errors
         }
     };
-
+    
     return (
         <AppBar position="static">
             <Toolbar>
@@ -45,10 +42,12 @@ const Navbar = () => {
                 <Box>
                     <Button color="inherit" component={Link} to="/search">Search</Button>
                     <Button color="inherit" component={Link} to="/github">GitHub</Button>
-                    <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
                     <Button color="inherit" component={Link} to="/chat">Chat</Button>
 
                     {/* Authentication Buttons */}
+                    {isAuthenticated ? (
+                        <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
+                    ) : null}
                     {!isAuthenticated ? (
                         <>
                             <Button color="inherit" component={Link} to="/login">Login</Button>

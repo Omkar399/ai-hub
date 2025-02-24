@@ -57,12 +57,17 @@ export const getCourses = async () => {
 // Get user bookmarks
 export const getUserBookmarks = async () => {
     try {
-        const response = await apiClient.get('/api/bookmarks');
+        const response = await apiClient.get('/api/bookmarks', { withCredentials: true });
         return response.data;
     } catch (error) {
-        handleError(error);
+        if (error.response?.status === 401) {
+            console.error('User is not authenticated.');
+            window.location.href = '/login'; // Redirect to login
+        } else {
+            console.error('Failed to fetch bookmarks:', error.response?.data || error.message);
+        }
     }
-};
+}  
 
 // Save a new bookmark
 export const saveBookmark = async (bookmarkData) => {
@@ -97,7 +102,7 @@ export const registerUser = async (userData) => {
 // Log in an existing user
 export const loginUser = async (credentials) => {
     try {
-        const response = await apiClient.post('/auth/login', credentials);
+        const response = await apiClient.post('/auth/login', credentials, { withCredentials: true });
         return response.data; // Return user data and success message
     } catch (error) {
         handleError(error);
@@ -107,8 +112,10 @@ export const loginUser = async (credentials) => {
 // Log out the current user
 export const logoutUser = async () => {
     try {
-        const response = await apiClient.post('/auth/logout');
-        return response.data; // Return success message if needed
+        await apiClient.post('/auth/logout');
+        localStorage.clear(); // Clear any stored data
+        sessionStorage.clear(); // Clear session storage if used
+        window.location.href = '/login'; /// Return success message if needed
     } catch (error) {
         console.error('Error during logout:', error);
         throw error; // Re-throw error for higher-level handling

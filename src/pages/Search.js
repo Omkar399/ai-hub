@@ -55,6 +55,27 @@ const SearchPage = () => {
     }
   };
 
+  // Function to add a bookmark
+  const addBookmark = async (resourceId) => {
+    try {
+        const response = await axios.post(
+          'http://localhost:5000/api/bookmarks',
+          { resource_id: resourceId },
+          {
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              withCredentials: true,
+          }
+      );
+      console.log(response.data);
+      alert('Bookmark added successfully!');
+    } catch (err) {
+      console.error(error.response?.data || error.message);
+      alert(error.response?.data?.error || 'Failed to add bookmark.')
+    }
+  };
+
   return (
     <div style={{ padding: '20px' }}>
       <h1>Search AI Resources</h1>
@@ -104,13 +125,6 @@ const SearchPage = () => {
               <h3 style={{ marginBottom: '5px' }}>{result.title}</h3>
             )}
 
-            {/* Display Published Date for arXiv */}
-            {result.published && (
-              <p style={{ marginBottom: '5px', color: '#888' }}>
-                <strong>Published:</strong> {new Date(result.published).toLocaleDateString()}
-              </p>
-            )}
-
             {/* Abstract/Description */}
             {result.abstract || result.description || result.snippet ? (
               <p style={{ marginBottom: '5px', color: '#555' }}>
@@ -118,25 +132,17 @@ const SearchPage = () => {
               </p>
             ) : null}
 
-            {/* Code URL for PapersWithCode */}
-            {result.code_url && (
-              <p>
-                <strong>Code:</strong>{' '}
-                <a href={result.code_url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF' }}>
-                  View Code
-                </a>
-              </p>
-            )}
-
-            {/* Repository URL for PapersWithCode */}
-            {result.repository_url && (
-              <p>
-                <strong>Repository:</strong>{' '}
-                <a href={result.repository_url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF' }}>
-                  View Repository
-                </a>
-              </p>
-            )}
+            {/* Bookmark Button */}
+            <button onClick={() => addBookmark(result.id)} style={{
+              backgroundColor: '#007BFF',
+              color: '#fff',
+              borderRadius: '5px',
+              border: 'none',
+              padding: '8px',
+              cursor: 'pointer'
+            }}>
+              Bookmark
+            </button>
           </li>
         ))}
       </ul>

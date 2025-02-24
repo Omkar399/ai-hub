@@ -9,6 +9,7 @@ import GithubExplorer from './pages/GithubExplorer';
 import Chat from './pages/Chat';
 import Login from './pages/Login'; // Import Login page
 import Signup from './pages/Signup'; 
+import ProtectedRoute from './components/ProtectedRoute';
 
 const theme = createTheme({
     palette: {
@@ -29,7 +30,14 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/search" element={<Search />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route
+                        path="/dashboard"
+                        element={
+                            <ProtectedRoute>
+                                <Dashboard />
+                            </ProtectedRoute>
+                        }
+                    />                   
                     <Route path="/github" element={<GithubExplorer />} />
                     <Route path="/chat" element={<Chat />} />
                     <Route path="/login" element={<Login />} /> {/* Login route */}

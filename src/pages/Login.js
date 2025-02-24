@@ -13,7 +13,7 @@ const Login = () => {
     try {
       const userData = await loginUser({ email, password });
       localStorage.setItem('user', JSON.stringify(userData.user)); // Save user data locally
-      navigate('/dashboard'); // Redirect after successful login
+      window.location.href = '/dashboard'; // Redirect after successful login
     } catch (err) {
       setError(err.error || 'Failed to log in');
     }

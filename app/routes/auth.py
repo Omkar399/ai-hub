@@ -60,3 +60,13 @@ def logout():
     except Exception as e:
         # Handle any unexpected errors gracefully
         return jsonify({"error": str(e)}), 500
+    
+@bp.route('/check', methods=['GET'])
+def check_auth():
+    """
+    Check if the current user is authenticated.
+    """
+    if current_user.is_authenticated:
+        return jsonify({"loggedIn": True, "user": {"id": current_user.id, "username": current_user.username}})
+    
+    return jsonify({"loggedIn": False}), 401
