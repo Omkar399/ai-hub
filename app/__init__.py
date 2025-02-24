@@ -21,16 +21,18 @@ def create_app():
     login_manager.login_view = 'main.login'
     
     # Enable CORS for all routes under /api/*
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    CORS(app, resources={r"/*": {"origins": "*"}})
     
     # Register blueprints
     from app.routes.main import bp as main_bp
     from app.routes.github import bp as github_bp
     from app.routes.resource import bp as resource_bp
+    from app.routes.auth import bp as auth_bp
     
     app.register_blueprint(main_bp)
     app.register_blueprint(github_bp, url_prefix='/api')
     app.register_blueprint(resource_bp, url_prefix='/api')
+    app.register_blueprint(auth_bp, url_prefix='/auth')
     register_error_handlers(app)
     return app
 

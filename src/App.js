@@ -7,6 +7,8 @@ import Search from './pages/Search';
 import Dashboard from './pages/Dashboard';
 import GithubExplorer from './pages/GithubExplorer';
 import Chat from './pages/Chat';
+import Login from './pages/Login'; // Import Login page
+import Signup from './pages/Signup'; 
 
 const theme = createTheme({
     palette: {
@@ -30,8 +32,10 @@ function App() {
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/github" element={<GithubExplorer />} />
                     <Route path="/chat" element={<Chat />} />
+                    <Route path="/login" element={<Login />} /> {/* Login route */}
+                    <Route path="/signup" element={<Signup />} /> {/* Signup route */}
                 </Routes>
-            </Router>
+                </Router>
         </ThemeProvider>
     );
 }

@@ -2,36 +2,74 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const SearchPage = () => {
-  const [resources, setResources] = useState([]);
+  const [results, setResults] = useState([]);
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('');
+  const [source, setSource] = useState('local'); // Default source is local database
   const [error, setError] = useState('');
+  const [currentPage, setCurrentPage] = useState(1); // Current page number
+  const resultsPerPage = 5; // Number of results per page
 
+  // Function to fetch resources based on query, category, and source
+  const fetchResources = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/search', {
+        params: {
+          q: query,
+          category,
+          source,
+        },
+      });
+      setResults(response.data);
+      setError(''); // Clear any previous errors
+    } catch (err) {
+      console.error(err);
+      setError('Failed to load resources.');
+      setResults([]);
+    }
+  };
+
+  // Trigger fetchResources whenever query, category, or source changes
   useEffect(() => {
-    const fetchResources = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/api/resources', {
-          params: { query, category },
-        });
-        setResources(response.data);
-      } catch (err) {
-        setError('Failed to load resources.');
-      }
-    };
+    if (query || category || source) {
+      fetchResources();
+    }
+  }, [query, category, source]); // Dependencies: re-run when these change
 
-    fetchResources();
-  }, [query, category]);
+  // Pagination logic
+  const indexOfLastResult = currentPage * resultsPerPage;
+  const indexOfFirstResult = indexOfLastResult - resultsPerPage;
+  const currentResults = results.slice(indexOfFirstResult, indexOfLastResult);
+
+  const totalPages = Math.ceil(results.length / resultsPerPage);
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
 
   return (
-    <div>
+    <div style={{ padding: '20px' }}>
       <h1>Search AI Resources</h1>
+      
+      {/* Search Input */}
       <input 
         type="text" 
-        placeholder="Search..." 
+        placeholder="Enter your query..." 
         value={query} 
         onChange={(e) => setQuery(e.target.value)} 
+        style={{ marginBottom: '10px', padding: '8px', width: '300px' }}
       />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+
+      {/* Category Dropdown */}
+      <select value={category} onChange={(e) => setCategory(e.target.value)} style={{ marginLeft: '10px', padding: '8px' }}>
         <option value="">All Categories</option>
         <option value="Courses">Courses</option>
         <option value="Handbooks">Handbooks</option>
@@ -39,15 +77,106 @@ const SearchPage = () => {
         <option value="Research Papers">Research Papers</option>
         <option value="Blogs">Blogs</option>
       </select>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <ul>
-        {resources.map((resource) => (
-          <li key={resource.id}>
-            <a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title}</a>
-            <p>{resource.description}</p>
+
+      {/* Source Dropdown */}
+      <select value={source} onChange={(e) => setSource(e.target.value)} style={{ marginLeft: '10px', padding: '8px' }}>
+        <option value="local">Local Database</option>
+        <option value="arxiv">arXiv</option>
+        <option value="paperswithcode">PapersWithCode</option>
+        <option value="google">Google Search</option>
+      </select>
+
+      {/* Error Message */}
+      {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+
+      {/* Results List */}
+      <ul style={{ listStyleType: 'none', padding: '0', marginTop: '20px' }}>
+        {currentResults.map((result, index) => (
+          <li key={index} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
+            {/* Title as a Hyperlink */}
+            {result.url || result.link ? (
+              <h3 style={{ marginBottom: '5px' }}>
+                <a href={result.url || result.link} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF', textDecoration: 'none' }}>
+                  {result.title}
+                </a>
+              </h3>
+            ) : (
+              <h3 style={{ marginBottom: '5px' }}>{result.title}</h3>
+            )}
+
+            {/* Display Published Date for arXiv */}
+            {result.published && (
+              <p style={{ marginBottom: '5px', color: '#888' }}>
+                <strong>Published:</strong> {new Date(result.published).toLocaleDateString()}
+              </p>
+            )}
+
+            {/* Abstract/Description */}
+            {result.abstract || result.description || result.snippet ? (
+              <p style={{ marginBottom: '5px', color: '#555' }}>
+                {result.abstract || result.description || result.snippet}
+              </p>
+            ) : null}
+
+            {/* Code URL for PapersWithCode */}
+            {result.code_url && (
+              <p>
+                <strong>Code:</strong>{' '}
+                <a href={result.code_url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF' }}>
+                  View Code
+                </a>
+              </p>
+            )}
+
+            {/* Repository URL for PapersWithCode */}
+            {result.repository_url && (
+              <p>
+                <strong>Repository:</strong>{' '}
+                <a href={result.repository_url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF' }}>
+                  View Repository
+                </a>
+              </p>
+            )}
           </li>
         ))}
       </ul>
+
+      {/* Pagination Controls */}
+      {results.length > resultsPerPage && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+          <button 
+            onClick={goToPreviousPage} 
+            disabled={currentPage === 1}
+            style={{
+              padding: '10px',
+              marginRight: '10px',
+              backgroundColor: currentPage === 1 ? '#ccc' : '#007BFF',
+              color: '#fff',
+              borderRadius: '5px',
+              border: 'none',
+              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+            }}
+          >
+            Previous
+          </button>
+          <span>Page {currentPage} of {totalPages}</span>
+          <button 
+            onClick={goToNextPage} 
+            disabled={currentPage === totalPages}
+            style={{
+              padding: '10px',
+              marginLeft: '10px',
+              backgroundColor: currentPage === totalPages ? '#ccc' : '#007BFF',
+              color: '#fff',
+              borderRadius: '5px',
+              border: 'none',
+              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+            }}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 };
