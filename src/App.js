@@ -8,7 +8,9 @@ import Dashboard from './pages/Dashboard';
 import GithubExplorer from './pages/GithubExplorer';
 import Chat from './pages/Chat';
 import Login from './pages/Login'; // Import Login page
-import Signup from './pages/Signup'; 
+import Signup from './pages/Signup'; // Import Signup page
+import SubmitResourceForm from './pages/SubmitResourceForm'; // Import Submit Resource Form
+import AdminPanel from './pages/AdminPanel'; // Import Admin Panel
 import ProtectedRoute from './components/ProtectedRoute';
 
 const theme = createTheme({
@@ -37,13 +39,33 @@ function App() {
                                 <Dashboard />
                             </ProtectedRoute>
                         }
-                    />                   
+                    />
                     <Route path="/github" element={<GithubExplorer />} />
                     <Route path="/chat" element={<Chat />} />
                     <Route path="/login" element={<Login />} /> {/* Login route */}
                     <Route path="/signup" element={<Signup />} /> {/* Signup route */}
+                    
+                    {/* Route for submitting resources */}
+                    <Route
+                        path="/submit-resource"
+                        element={
+                            <ProtectedRoute>
+                                <SubmitResourceForm />
+                            </ProtectedRoute>
+                        }
+                    />
+
+                    {/* Route for admin panel */}
+                    <Route
+                        path="/admin-panel"
+                        element={
+                            <ProtectedRoute adminOnly={true}>
+                                <AdminPanel />
+                            </ProtectedRoute>
+                        }
+                    />
                 </Routes>
-                </Router>
+            </Router>
         </ThemeProvider>
     );
 }

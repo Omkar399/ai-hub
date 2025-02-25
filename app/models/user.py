@@ -9,7 +9,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password_hash = db.Column(db.String(128))
-
+    resources = db.relationship('Resource', backref='submitted_by_user', lazy=True)
     # Define many-to-many relationship with Resource
     bookmarks = db.relationship(
         'Resource',

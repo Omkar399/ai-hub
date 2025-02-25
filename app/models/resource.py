@@ -10,7 +10,9 @@ class Resource(db.Model):
     description = Column(String, nullable=True)  # Description of the resource
     category_id = Column(Integer, ForeignKey('categories.id'), nullable=False)  # Foreign key to Category
     url = Column(String, nullable=False)  # URL to the resource
-    approved = Column(Boolean, default=False)  # Admin approval status
+    approved = Column(Boolean, default=False) 
+    submitted_by = Column(Integer, ForeignKey('user.id', name='fk_resources_user'), nullable=True)
+
 
     # Convert Resource object to a dictionary
     def to_dict(self):
@@ -21,6 +23,7 @@ class Resource(db.Model):
             "category": self.category.name if self.category else None,
             "url": self.url,
             "approved": self.approved,
+            "submitted_by": self.submitted_by,
         }
 
 class Category(db.Model):

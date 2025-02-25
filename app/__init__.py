@@ -37,12 +37,14 @@ def create_app():
     from app.routes.resource import bp as resource_bp
     from app.routes.auth import bp as auth_bp
     from app.routes.bookmarks import bp as bookmarks_bp
+    from app.routes.admin import bp as admin_bp
     
     app.register_blueprint(main_bp)
     app.register_blueprint(github_bp, url_prefix='/api')
     app.register_blueprint(resource_bp, url_prefix='/api')
     app.register_blueprint(bookmarks_bp, url_prefix='/api')
     app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(admin_bp, url_prefix='/api')
     register_error_handlers(app)
     return app
 
