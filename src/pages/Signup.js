@@ -12,40 +12,58 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
+      // Attempt to register the user
       await registerUser({ username, email, password });
-      navigate('/login'); // Redirect after successful signup
+
+      // Redirect to the login page upon successful signup
+      navigate('/login');
     } catch (err) {
+      // Handle registration error
       setError(err.error || 'Failed to register');
     }
   };
 
   return (
-    <div>
+    <div style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
       <h1>Sign Up</h1>
-      <form onSubmit={handleSignup}>
-        <input 
-          type="text" 
-          placeholder="Username" 
-          value={username} 
-          onChange={(e) => setUsername(e.target.value)} 
-          required 
+      <form onSubmit={handleSignup} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        {/* Username Input */}
+        <input
+          type="text"
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+          style={{ padding: '10px', fontSize: '16px' }}
         />
-        <input 
-          type="email" 
-          placeholder="Email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
+
+        {/* Email Input */}
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          style={{ padding: '10px', fontSize: '16px' }}
         />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-          required 
+
+        {/* Password Input */}
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+          style={{ padding: '10px', fontSize: '16px' }}
         />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit">Sign Up</button>
+
+        {/* Error Message */}
+        {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+
+        {/* Submit Button */}
+        <button type="submit" style={{ padding: '10px', fontSize: '16px', cursor: 'pointer' }}>
+          Sign Up
+        </button>
       </form>
     </div>
   );
