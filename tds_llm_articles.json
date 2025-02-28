@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How LLMs Work: Reinforcement Learning, RLHF, DeepSeek R1, OpenAI o1, AlphaGo",
+        "url": "https://towardsdatascience.com/how-llms-work-reinforcement-learning-rlhf-deepseek-r1-openai-o1-alphago/",
+        "summary": "Part 2 of the LLM deep dive",
+        "author": "Clara Chong",
+        "date": "2025-02-27T16:21:24-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "6 Common LLM Customization Strategies Briefly Explained",
+        "url": "https://towardsdatascience.com/6-common-llm-customization-strategies-briefly-explained/",
+        "summary": "From Theory to practice: understanding RAG, agents, fine-tuning, and more",
+        "author": "Destin Gong",
+        "date": "2025-02-24T14:27:50-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "How to Use an LLM-Powered Boilerplate for Building Your Own Node.js API",
+        "url": "https://towardsdatascience.com/how-to-use-an-llm-powered-boilerplate-for-building-your-own-node-js-api/",
+        "summary": "For a long time, one of the common ways to start new Node.js projects was…",
+        "author": "Uladzimir Yancharuk",
+        "date": "2025-02-20T19:15:23-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "Formulation of Feature Circuits with Sparse Autoencoders in LLM",
+        "url": "https://towardsdatascience.com/formulation-of-feature-circuits-with-sparse-autoencoders-in-llm/",
+        "summary": "Large Language models (LLMs) have witnessed impressive progress and these large models can do a…",
+        "author": "Shuyang",
+        "date": "2025-02-19T15:58:35-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "How LLMs Work: Pre-Training to Post-Training, Neural Networks, Hallucinations, and Inference",
+        "url": "https://towardsdatascience.com/how-llms-work-pre-training-to-post-training-neural-networks-hallucinations-and-inference/",
+        "summary": "With the recent explosion of interest in large language models (LLMs), they often seem almost…",
+        "author": "Clara Chong",
+        "date": "2025-02-18T12:39:29-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "Tutorial: Semantic Clustering of User Messages with LLM Prompts",
+        "url": "https://towardsdatascience.com/tutorial-semantic-clustering-of-user-messages-with-llm-prompts/",
+        "summary": "As a Developer Advocate, it’s challenging to keep up with user forum messages and understand…",
+        "author": "Christy Bergman",
+        "date": "2025-02-17T10:00:00-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "I Tried Making my Own (Bad) LLM Benchmark to Cheat in Escape Rooms",
+        "url": "https://towardsdatascience.com/i-tried-making-my-own-bad-llm-benchmark-to-cheat-in-escape-rooms/",
+        "summary": "Recently, DeepSeek announced their latest model, R1, and article after article came out praising its…",
+        "author": "Jaemin Han",
+        "date": "2025-02-07T15:36:42-05:00",
+        "read_time": "20 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "Synthetic Data Generation with LLMs",
+        "url": "https://towardsdatascience.com/synthetic-data-generation-with-llms/",
+        "summary": "Popularity of RAG Over the past two years while working with financial firms, I’ve observed…",
+        "author": "Nethra Ranganathan",
+        "date": "2025-02-07T13:58:45-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    },
+    {
+        "title": "A Comprehensive Guide to LLM Temperature 🔥🌡️",
+        "url": "https://towardsdatascience.com/a-comprehensive-guide-to-llm-temperature/",
+        "summary": "While building my own LLM-based application, I found many prompt engineering guides, but few equivalent…",
+        "author": "Kelsey Wang",
+        "date": "2025-02-07T12:18:11-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "llm"
+    }
+]

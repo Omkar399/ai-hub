@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Classifier-free guidance for LLMs performance enhancing",
+        "url": "https://towardsdatascience.com/classifier-free-guidance-for-llms-performance-enhancing-03375053d925/",
+        "summary": "Check and improve classifier-free guidance for text generation large language models. While participating in NeurIPS…",
+        "author": "Roman S",
+        "date": "2024-12-23T18:42:22-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Classifier-Free Guidance in LLMs Safety – NeurIPS 2024 Challenge Experience",
+        "url": "https://towardsdatascience.com/classifier-free-guidance-in-llms-safety-neurips-2024-challenge-experience-30c9d88d6b98/",
+        "summary": "LLM unlearning without model degradation is achieved through direct training on the replacement data and…",
+        "author": "Roman S",
+        "date": "2024-12-18T17:50:40-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Writing LLMs in Rust: Looking for an Efficient Matrix Multiplication",
+        "url": "https://towardsdatascience.com/writing-llms-in-rust-looking-for-an-efficient-matrix-multiplication-e9539b0cb9d3/",
+        "summary": "Here are the lessons I learned and how I am writing llm.rust and tackling the…",
+        "author": "Stefano Bosisio",
+        "date": "2024-11-14T13:02:11-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Efficient Document Chunking Using LLMs: Unlocking Knowledge One Block at a Time",
+        "url": "https://towardsdatascience.com/efficient-document-chunking-using-llms-unlocking-knowledge-one-block-at-a-time-355717a88c5c/",
+        "summary": "This article explains how to use an LLM (Large Language Model) to perform the chunking…",
+        "author": "Carlo Peron",
+        "date": "2024-10-21T16:15:48-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Fine-Tuning LLMs with 32-bit, 8-bit, and Paged AdamW Optimizers",
+        "url": "https://towardsdatascience.com/fine-tuning-llms-with-32-bit-8-bit-and-paged-adamw-optimizers-1034e3105634/",
+        "summary": "Finding the right trade-off between memory efficiency, accuracy, and speed",
+        "author": "Benjamin Marie",
+        "date": "2024-10-10T07:14:01-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "How Did Open Food Facts Fix OCR-Extracted Ingredients Using Open-Source LLMs?",
+        "url": "https://towardsdatascience.com/how-did-open-food-facts-use-open-source-llms-to-enhance-ingredients-extraction-d74dfe02e0e4/",
+        "summary": "Delve into an end-to-end Machine Learning project to improve the quality of the Open Food…",
+        "author": "Jeremy Arancio",
+        "date": "2024-10-06T16:51:24-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Predicting metadata for Humanitarian datasets with LLMs part 2 – An alternative to fine-tuning",
+        "url": "https://towardsdatascience.com/predicting-metadata-for-humanitarian-datasets-with-llms-part-2-an-alternative-to-fine-tuning-953a49c657cf/",
+        "summary": "Using LLM prompting for tagging metadata on humanitarian datasets",
+        "author": "Matthew Harris",
+        "date": "2024-08-03T14:56:29-05:00",
+        "read_time": "34 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Transforming Next-Token Prediction into Classification with LLMs",
+        "url": "https://towardsdatascience.com/transforming-next-token-prediction-into-classification-with-llms-fb4f33a02637/",
+        "summary": "From tokens to labels: Performing classification with large language models",
+        "author": "Yu-Cheng Tsai",
+        "date": "2024-06-20T21:39:01-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    },
+    {
+        "title": "Fine Tuning LLMs on a Single Consumer Graphic Card",
+        "url": "https://towardsdatascience.com/fine-tuning-llms-on-a-single-consumer-graphic-card-6de1587daddb/",
+        "summary": "Learnings from fine-tuning a large language model on a single consumer GPU",
+        "author": "Naser Tamimi",
+        "date": "2024-01-31T17:55:51-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "llms in fi"
+    }
+]

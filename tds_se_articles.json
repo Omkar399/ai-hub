@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How LLMs Work: Reinforcement Learning, RLHF, DeepSeek R1, OpenAI o1, AlphaGo",
+        "url": "https://towardsdatascience.com/how-llms-work-reinforcement-learning-rlhf-deepseek-r1-openai-o1-alphago/",
+        "summary": "Part 2 of the LLM deep dive",
+        "author": "Clara Chong",
+        "date": "2025-02-27T16:21:24-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "Is Python Set to Surpass Its Competitors?",
+        "url": "https://towardsdatascience.com/is-python-set-to-surpass-its-competitors/",
+        "summary": "The features that make Python the most suitable programming language for most people",
+        "author": "Jiayan Yin",
+        "date": "2025-02-25T19:46:31-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "Breaking the Bottleneck: GPU-Optimised Video Processing for Deep Learning",
+        "url": "https://towardsdatascience.com/breaking-the-bottleneck-gpu-optimised-video-processing-for-deep-learning/",
+        "summary": "Accelerate your AI video workflows with end-to-end GPU video processing",
+        "author": "David Redó Nieto",
+        "date": "2025-02-25T13:53:22-05:00",
+        "read_time": "3 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "How to Use an LLM-Powered Boilerplate for Building Your Own Node.js API",
+        "url": "https://towardsdatascience.com/how-to-use-an-llm-powered-boilerplate-for-building-your-own-node-js-api/",
+        "summary": "For a long time, one of the common ways to start new Node.js projects was…",
+        "author": "Uladzimir Yancharuk",
+        "date": "2025-02-20T19:15:23-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "Multimodal Search Engine Agents Powered by BLIP-2 and Gemini",
+        "url": "https://towardsdatascience.com/multimodal-search-engine-agents-powered-by-blip-2-and-gemini/",
+        "summary": "This post was co-authored with Rafael Guedes. Introduction Traditional models can only process a single…",
+        "author": "Luís Roque",
+        "date": "2025-02-19T17:01:52-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "Formulation of Feature Circuits with Sparse Autoencoders in LLM",
+        "url": "https://towardsdatascience.com/formulation-of-feature-circuits-with-sparse-autoencoders-in-llm/",
+        "summary": "Large Language models (LLMs) have witnessed impressive progress and these large models can do a…",
+        "author": "Shuyang",
+        "date": "2025-02-19T15:58:35-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "Tutorial: Semantic Clustering of User Messages with LLM Prompts",
+        "url": "https://towardsdatascience.com/tutorial-semantic-clustering-of-user-messages-with-llm-prompts/",
+        "summary": "As a Developer Advocate, it’s challenging to keep up with user forum messages and understand…",
+        "author": "Christy Bergman",
+        "date": "2025-02-17T10:00:00-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "How Does Luck Influence the Board Game Sequence?",
+        "url": "https://towardsdatascience.com/how-does-luck-influence-the-board-game-sequence/",
+        "summary": "Losing in board games is rarely fun. And certainly not when luck decides the game.…",
+        "author": "Lars R. Nielsen",
+        "date": "2025-02-14T15:02:15-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "se"
+    },
+    {
+        "title": "Learnings from a Machine Learning Engineer — Part 2: The Data Sets",
+        "url": "https://towardsdatascience.com/learnings-from-a-machine-learning-engineer-part-2-the-data-sets/",
+        "summary": "In Part 1, we discussed the importance of collecting good image data and assigning proper labels…",
+        "author": "David Martin",
+        "date": "2025-02-13T15:29:39-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "se"
+    }
+]

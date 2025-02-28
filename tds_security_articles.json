@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How to Enhance SQL Code Security and Maintainability",
+        "url": "https://towardsdatascience.com/how-to-enhance-sql-code-security-and-maintainability-3e398b4dd68e/",
+        "summary": "Introduction to SQL procedures, their applications and benefits, and how to encrypt SQL code",
+        "author": "Jiayan Yin",
+        "date": "2025-01-31T12:02:01-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "Overcoming Security Challenges in Protecting Shared Generative AI Environments",
+        "url": "https://towardsdatascience.com/overcoming-security-challenges-in-protecting-shared-generative-ai-environments-1ffb27da1bde/",
+        "summary": "Ensuring Safe AI on Multi-Tenancy",
+        "author": "Han HELOIR, Ph.D. ☕️",
+        "date": "2024-12-02T16:17:03-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "NeMo Guardrails, the Ultimate Open-Source LLM Security Toolkit",
+        "url": "https://towardsdatascience.com/nemo-guardrails-the-ultimate-open-source-llm-security-toolkit-0a34648713ef/",
+        "summary": "Exploring NeMo Guardrails’ practical use cases",
+        "author": "Wenqi Glantz",
+        "date": "2024-02-09T16:49:16-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "How Much Data Do We Need? Balancing Machine Learning with Security Considerations",
+        "url": "https://towardsdatascience.com/how-much-data-do-we-need-balancing-machine-learning-with-security-considerations-a26911f211f6/",
+        "summary": "For a data scientist, there’s no such thing as too much data. But what happens…",
+        "author": "Stephanie Kirmer",
+        "date": "2023-12-15T22:25:54-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "Data Mastery with Python and SQL: Unleashing Efficiency and Security through 4 Strategic Use Cases",
+        "url": "https://towardsdatascience.com/data-mastery-with-python-and-sql-unleashing-efficiency-and-security-through-4-strategic-use-cases-eb8afb5019a0/",
+        "summary": "Leverage techniques to extract hashtags, suppress warnings, and utilize parameterized queries for powerful data analysis",
+        "author": "Subha Ganapathi",
+        "date": "2023-05-23T20:17:22-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "Architecture of AI-Driven Security Operations with a Low False Positive Rate",
+        "url": "https://towardsdatascience.com/architecture-of-ai-driven-security-operations-with-a-low-false-positive-rate-a33dbbad55b4/",
+        "summary": "This article discusses a mindset on building production-ready machine learning solutions when applied to cyber-security…",
+        "author": "Dmitrijs Trizna",
+        "date": "2023-04-21T03:39:56-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "Data Sharing Challenges: Privacy and Security Concerns",
+        "url": "https://towardsdatascience.com/data-sharing-challenges-privacy-and-security-concerns-ca436543a323/",
+        "summary": "Navigating privacy and security when implementing data sharing",
+        "author": "Louise de Leyritz",
+        "date": "2023-02-01T18:49:32-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "4 + 2 Security features in Power BI",
+        "url": "https://towardsdatascience.com/4-2-security-features-in-power-bi-4c5a21968e53/",
+        "summary": "One year after my first article on this topic, here is an update on new…",
+        "author": "Salvatore Cagliari",
+        "date": "2022-11-25T14:43:40-05:00",
+        "read_time": "5 min read",
+        "page_found": 1,
+        "search_term": "security"
+    },
+    {
+        "title": "As MLOps Hits Maturity it’s Time to Consider Cybersecurity",
+        "url": "https://towardsdatascience.com/as-mlops-hits-maturity-its-time-to-consider-cybersecurity-ebd45e350532/",
+        "summary": "Pushing your ML project to production? Here’s what to look out for",
+        "author": "Anouk Dutrée",
+        "date": "2022-09-29T15:22:26-05:00",
+        "read_time": "18 min read",
+        "page_found": 1,
+        "search_term": "security"
+    }
+]

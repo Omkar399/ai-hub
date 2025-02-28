@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How LLMs Work: Reinforcement Learning, RLHF, DeepSeek R1, OpenAI o1, AlphaGo",
+        "url": "https://towardsdatascience.com/how-llms-work-reinforcement-learning-rlhf-deepseek-r1-openai-o1-alphago/",
+        "summary": "Part 2 of the LLM deep dive",
+        "author": "Clara Chong",
+        "date": "2025-02-27T16:21:24-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "How LLMs Work: Pre-Training to Post-Training, Neural Networks, Hallucinations, and Inference",
+        "url": "https://towardsdatascience.com/how-llms-work-pre-training-to-post-training-neural-networks-hallucinations-and-inference/",
+        "summary": "With the recent explosion of interest in large language models (LLMs), they often seem almost…",
+        "author": "Clara Chong",
+        "date": "2025-02-18T12:39:29-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "Synthetic Data Generation with LLMs",
+        "url": "https://towardsdatascience.com/synthetic-data-generation-with-llms/",
+        "summary": "Popularity of RAG Over the past two years while working with financial firms, I’ve observed…",
+        "author": "Nethra Ranganathan",
+        "date": "2025-02-07T13:58:45-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "Understanding Emergent Capabilities in LLMs: Lessons from Biological Systems",
+        "url": "https://towardsdatascience.com/understanding-emergent-capabilities-in-llms-lessons-from-biological-systems-d59b67ea0379/",
+        "summary": "How natural systems fundamental laws help explain AI’s unexpected abilities",
+        "author": "Javier Marin",
+        "date": "2025-01-22T18:49:06-05:00",
+        "read_time": "24 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "How Large Language Models (LLMs) Learn: Playing Games",
+        "url": "https://towardsdatascience.com/how-large-language-models-llms-learn-playing-games-cb023d780401/",
+        "summary": "LLMs are just professional Mad Libs Players",
+        "author": "James Thorn",
+        "date": "2025-01-09T15:31:38-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "Classifier-free guidance for LLMs performance enhancing",
+        "url": "https://towardsdatascience.com/classifier-free-guidance-for-llms-performance-enhancing-03375053d925/",
+        "summary": "Check and improve classifier-free guidance for text generation large language models. While participating in NeurIPS…",
+        "author": "Roman S",
+        "date": "2024-12-23T18:42:22-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "Can LLMs talk SQL, SPARQL, Cypher, and MongoDB Query Language (MQL) equally well?",
+        "url": "https://towardsdatascience.com/can-llms-talk-sql-sparql-cypher-and-mongodb-query-language-mql-equally-well-a478f64cc769/",
+        "summary": "Comparing Text-to-Query capabilities of Large Language Models (LLMs) for four different Query Language",
+        "author": "Jonathan Fürst",
+        "date": "2024-12-09T16:23:25-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "Chat with Your Images using Multimodal LLMs",
+        "url": "https://towardsdatascience.com/chat-with-your-images-using-multimodal-llms-60af003e8bfa/",
+        "summary": "Learn how to build Llama 3.2-Vision locally in a chat-like mode, and explore its Multimodal…",
+        "author": "Lihi Gur Arie, PhD",
+        "date": "2024-12-05T20:16:05-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    },
+    {
+        "title": "Combining Large and Small LLMs to Boost Inference Time and Quality",
+        "url": "https://towardsdatascience.com/combining-large-and-small-llms-for-inference-time-and-quality-boosts-1779b6b5100b/",
+        "summary": "Implementing Speculative and Contrastive Decoding",
+        "author": "Richa Gadgil",
+        "date": "2024-12-05T03:14:05-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "llms in fir"
+    }
+]

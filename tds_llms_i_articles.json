@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Writing LLMs in Rust: Looking for an Efficient Matrix Multiplication",
+        "url": "https://towardsdatascience.com/writing-llms-in-rust-looking-for-an-efficient-matrix-multiplication-e9539b0cb9d3/",
+        "summary": "Here are the lessons I learned and how I am writing llm.rust and tackling the…",
+        "author": "Stefano Bosisio",
+        "date": "2024-11-14T13:02:11-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "How I Studied LLMs in Two Weeks: A Comprehensive Roadmap",
+        "url": "https://towardsdatascience.com/how-i-studied-llms-in-two-weeks-a-comprehensive-roadmap-e8ac19667a31/",
+        "summary": "A day-by-day detailed LLM roadmap from beginner to advanced, plus some study tips",
+        "author": "Hesam Sheikh",
+        "date": "2024-10-18T23:58:10-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "Exploring the Strategic Capabilities of LLMs in a Risk Game Setting",
+        "url": "https://towardsdatascience.com/exploring-the-strategic-capabilities-of-llms-in-a-risk-game-setting-43c868d83c3b/",
+        "summary": "In a simulated Risk environment, large language models from Anthropic, OpenAI, and Meta showcase distinct…",
+        "author": "Hans Christian Ekne",
+        "date": "2024-08-27T00:13:15-05:00",
+        "read_time": "39 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "Running Local LLMs is More Useful and Easier Than You Think",
+        "url": "https://towardsdatascience.com/running-local-llms-is-more-useful-and-easier-than-you-think-f735631272ad/",
+        "summary": "A step-by-step guide to run Llama3 locally with Python",
+        "author": "Guillaume Weingertner",
+        "date": "2024-07-11T19:35:45-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "In Defense of LLMs in Data Science: What ChatGPT Can and Can’t Do for Your Data Science Career",
+        "url": "https://towardsdatascience.com/in-defense-of-llms-in-data-science-what-chatgpt-can-and-cant-do-for-your-data-science-career-c166047b8fbb/",
+        "summary": "ChatGPT can take your data science game to the next level – if you know…",
+        "author": "Murtaza Ali",
+        "date": "2024-04-11T16:57:05-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "Deploying LLMs Into Production Using TensorRT LLM",
+        "url": "https://towardsdatascience.com/deploying-llms-into-production-using-tensorrt-llm-ed36e620dac4/",
+        "summary": "A guide on accelerating inference performance",
+        "author": "Het Trivedi",
+        "date": "2024-02-22T06:26:24-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "How to Use LLMs in Unity",
+        "url": "https://towardsdatascience.com/how-to-use-llms-in-unity-308c9c0f637c/",
+        "summary": "Integrating Large Language Models in the Unity engine with LLMUnity",
+        "author": "Antonis Makropoulos",
+        "date": "2024-01-09T15:28:05-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "Solving Reasoning Problems with LLMs in 2023",
+        "url": "https://towardsdatascience.com/solving-reasoning-problems-with-llms-in-2023-6643bdfd606d/",
+        "summary": "It’s the beginning of 2024 and ChatGPT just celebrated its one-year birthday. One year is…",
+        "author": "Zhaocheng Zhu",
+        "date": "2024-01-06T01:13:04-05:00",
+        "read_time": "21 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    },
+    {
+        "title": "Large Models Meet Big Data: Spark and LLMs in Harmony",
+        "url": "https://towardsdatascience.com/large-models-meet-big-data-spark-and-llms-in-harmony-5e2976b69b62/",
+        "summary": "A step-by-step guide to use Apache Spark and large language models",
+        "author": "Naser Tamimi",
+        "date": "2023-12-05T14:41:20-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "llms i"
+    }
+]

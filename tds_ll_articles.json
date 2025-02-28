@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How LLMs Work: Reinforcement Learning, RLHF, DeepSeek R1, OpenAI o1, AlphaGo",
+        "url": "https://towardsdatascience.com/how-llms-work-reinforcement-learning-rlhf-deepseek-r1-openai-o1-alphago/",
+        "summary": "Part 2 of the LLM deep dive",
+        "author": "Clara Chong",
+        "date": "2025-02-27T16:21:24-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "LLaDA: The Diffusion Model That Could Redefine Language Generation",
+        "url": "https://towardsdatascience.com/llada-the-diffusion-model-that-could-redefine-language-generation/",
+        "summary": "How LLaDA works, why it matters, and how it could shape the next generation of…",
+        "author": "Maxime Wolf",
+        "date": "2025-02-26T13:18:22-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "Enhancing RAG: Beyond Vanilla Approaches",
+        "url": "https://towardsdatascience.com/enhancing-rag-beyond-vanilla-approaches/",
+        "summary": "Retrieval-Augmented Generation (RAG) is a powerful technique that enhances language models by incorporating external information…",
+        "author": "Ziad SALLOUM",
+        "date": "2025-02-24T20:55:02-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "6 Common LLM Customization Strategies Briefly Explained",
+        "url": "https://towardsdatascience.com/6-common-llm-customization-strategies-briefly-explained/",
+        "summary": "From Theory to practice: understanding RAG, agents, fine-tuning, and more",
+        "author": "Destin Gong",
+        "date": "2025-02-24T14:27:50-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "Do European M&Ms Actually Taste Better than American M&Ms?",
+        "url": "https://towardsdatascience.com/do-european-mms-actually-taste-better-than-american-mms/",
+        "summary": "An overly-enthusiastic application of science and data visualization to a question we’ve all been asking",
+        "author": "Erin Wilson",
+        "date": "2025-02-21T16:52:58-05:00",
+        "read_time": "22 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "Unraveling Spatially Variable Genes: A Statistical Perspective on Spatial Transcriptomics",
+        "url": "https://towardsdatascience.com/unraveling-spatially-variable-genes-a-statistical-perspective-on-spatial-transcriptomics/",
+        "summary": "The article was written by Guanao Yan, Ph.D. student of Statistics and Data Science at…",
+        "author": "Jingyi Jessica Li",
+        "date": "2025-02-21T01:06:04-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "How to Use an LLM-Powered Boilerplate for Building Your Own Node.js API",
+        "url": "https://towardsdatascience.com/how-to-use-an-llm-powered-boilerplate-for-building-your-own-node-js-api/",
+        "summary": "For a long time, one of the common ways to start new Node.js projects was…",
+        "author": "Uladzimir Yancharuk",
+        "date": "2025-02-20T19:15:23-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "Advanced Time Intelligence in DAX with Performance in Mind",
+        "url": "https://towardsdatascience.com/advanced-time-intelligence-in-dax-with-performance-in-mind/",
+        "summary": "We all know the usual Time Intelligence function based on years, quarters, months, and days.…",
+        "author": "Salvatore Cagliari",
+        "date": "2025-02-19T19:05:46-05:00",
+        "read_time": "18 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    },
+    {
+        "title": "Formulation of Feature Circuits with Sparse Autoencoders in LLM",
+        "url": "https://towardsdatascience.com/formulation-of-feature-circuits-with-sparse-autoencoders-in-llm/",
+        "summary": "Large Language models (LLMs) have witnessed impressive progress and these large models can do a…",
+        "author": "Shuyang",
+        "date": "2025-02-19T15:58:35-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "ll"
+    }
+]

@@ -5,6 +5,10 @@ from app.models.resource import Category  # Ensure this is imported if using cat
 from app.services.arxiv_service import fetch_arxiv_papers
 from app.services.paperswithcode_service import fetch_papers_with_code
 from app.services.google_search_service import search_google
+from app.services.coursera_service import fetch_coursera_courses
+from app.services.medium_service import scrape_tds_articles
+from app.services.github_services import search_github_repositories
+from app.services.tutorials_service import fetch_google_tutorials
 
 bp = Blueprint('main', __name__)
 chatbot = AIAssistant()
@@ -62,6 +66,32 @@ def search():
     elif source == 'google':
         try:
             results.extend(search_google(query))
+        except Exception as e:
+            return jsonify({"error": f"Failed to fetch data from Google Search: {str(e)}"}), 500
+    
+    elif source == 'coursera':
+        try:
+            courses = fetch_coursera_courses(query)
+            print(f"Fetched courses from Coursera: {courses}")
+            results.extend(courses)
+        except Exception as e:
+            return jsonify({"error": f"Failed to fetch data from Coursera: {str(e)}"}), 500
+        
+    elif source == 'medium':
+        try:
+            results.extend(scrape_tds_articles(query))
+        except Exception as e:
+            return jsonify({"error": f"Failed to fetch data from Medium: {str(e)}"}), 500
+    
+    elif source == 'github':
+        try:
+            results.extend(search_github_repositories(query))
+        except Exception as e:
+            return jsonify({"error": f"Failed to fetch data from GitHub: {str(e)}"}), 500
+    
+    elif source == 'goooglesearch':
+        try:
+            results.extend(fetch_google_tutorials(query))
         except Exception as e:
             return jsonify({"error": f"Failed to fetch data from Google Search: {str(e)}"}), 500
 

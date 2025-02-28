@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Search from './pages/Search';
+import KnowledgeBase from './pages/KnowledgeBase';
 import Dashboard from './pages/Dashboard';
 import GithubExplorer from './pages/GithubExplorer';
 import Chat from './pages/Chat';
@@ -32,6 +33,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/search" element={<Search />} />
+                    <Route path="/knowledgebase" element={<KnowledgeBase />} />
                     <Route
                         path="/dashboard"
                         element={

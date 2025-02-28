@@ -1,0 +1,92 @@
+[
+    {
+        "title": "LLaDA: The Diffusion Model That Could Redefine Language Generation",
+        "url": "https://towardsdatascience.com/llada-the-diffusion-model-that-could-redefine-language-generation/",
+        "summary": "How LLaDA works, why it matters, and how it could shape the next generation of…",
+        "author": "Maxime Wolf",
+        "date": "2025-02-26T13:18:22-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "Efficient Data Handling in Python with Arrow",
+        "url": "https://towardsdatascience.com/efficient-data-handling-in-python-with-arrow/",
+        "summary": "Introducing Arrow to those who are still unaware of its power",
+        "author": "Pol Marin",
+        "date": "2025-02-25T15:56:16-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "Zero Human Code: What I Learned from Forcing AI to Build (and Fix) Its Own Code for 27 Straight Days",
+        "url": "https://towardsdatascience.com/zero-human-code-what-i-learned-from-forcing-ai-to-build-and-fix-its-own-code-for-27-straight-days/",
+        "summary": "27 days, 1,700+ commits, 99,9% AI generated code The narrative around AI development tools has…",
+        "author": "Daniel Bentes",
+        "date": "2025-02-19T14:03:44-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "How to Fine-Tune DistilBERT for Emotion Classification",
+        "url": "https://towardsdatascience.com/how-to-fine-tune-distilbert-for-emotion-classification/",
+        "summary": "The customer support teams were drowning with the overwhelming volume of customer inquiries at every…",
+        "author": "Claudia Ng",
+        "date": "2025-02-18T19:10:39-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "Triangle Forecasting: Why Traditional Impact Estimates Are Inflated (And How to Fix Them)",
+        "url": "https://towardsdatascience.com/triangle-forecasting-why-traditional-impact-estimates-are-inflated-and-how-to-fix-them/",
+        "summary": "Accurate impact estimations can make or break your business case. Yet, despite its importance, most…",
+        "author": "Sayali Kulkarni",
+        "date": "2025-02-07T15:39:59-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "Efficient Metric Collection in PyTorch: Avoiding the Performance Pitfalls of TorchMetrics",
+        "url": "https://towardsdatascience.com/efficient-metric-collection-in-pytorch-avoiding-the-performance-pitfalls-of-torchmetrics/",
+        "summary": "Metric collection is an essential part of every machine learning project, enabling us to track…",
+        "author": "Chaim Rand",
+        "date": "2025-02-06T20:22:43-05:00",
+        "read_time": "13 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "How to Find Seasonality Patterns in Time Series",
+        "url": "https://towardsdatascience.com/how-to-find-seasonality-patterns-in-time-series-c3b9f11e89c6/",
+        "summary": "Using Fourier Transform to detect seasonal components",
+        "author": "Lorenzo Mezzini",
+        "date": "2025-02-03T13:02:03-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "Fine-tuning Multimodal Embedding Models",
+        "url": "https://towardsdatascience.com/fine-tuning-multimodal-embedding-models-bf007b1c5da5/",
+        "summary": "Adapting CLIP to YouTube Data (with Python Code)",
+        "author": "Shaw Talebi",
+        "date": "2025-01-31T22:31:23-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    },
+    {
+        "title": "Small Training Dataset? You Need SetFit",
+        "url": "https://towardsdatascience.com/small-training-dataset-you-need-setfit-61d43c7d92f2/",
+        "summary": "The enterprise-friendly way to train NLP classifiers with Python in 2025",
+        "author": "Matt Chapman",
+        "date": "2025-01-27T17:50:11-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "fi"
+    }
+]

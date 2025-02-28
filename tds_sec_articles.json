@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How to Enhance SQL Code Security and Maintainability",
+        "url": "https://towardsdatascience.com/how-to-enhance-sql-code-security-and-maintainability-3e398b4dd68e/",
+        "summary": "Introduction to SQL procedures, their applications and benefits, and how to encrypt SQL code",
+        "author": "Jiayan Yin",
+        "date": "2025-01-31T12:02:01-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "You Think 80% Means 80%? Why Prediction Probabilities Need a Second Look",
+        "url": "https://towardsdatascience.com/you-think-80-means-80-why-prediction-probabilities-need-a-second-look-ebc8b650cf21/",
+        "summary": "Understand the gap between predicted probabilities and real-world outcomes",
+        "author": "Hennie de Harder",
+        "date": "2025-01-14T12:34:25-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "How to Securely Connect Microsoft Fabric to Azure Databricks SQL API",
+        "url": "https://towardsdatascience.com/how-to-securely-connect-microsoft-fabric-to-azure-databricks-sql-api-50d363c71104/",
+        "summary": "Integration architecture focusing on security and access control",
+        "author": "René Bremer",
+        "date": "2025-01-07T19:09:46-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "Harnessing Polars and Geopandas to Generate Millions of Transects in Seconds",
+        "url": "https://towardsdatascience.com/harnessing-polars-and-geopandas-to-generate-millions-of-transects-in-seconds-d37b176a0b57/",
+        "summary": "Making the bears play nice",
+        "author": "Tony Albanese",
+        "date": "2025-01-03T11:01:37-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "How to Process 10k Images in Seconds",
+        "url": "https://towardsdatascience.com/how-to-process-10k-images-in-seconds-e99661f5c2b5/",
+        "summary": "Efficient image operations with multiprocessing in Python",
+        "author": "Florian Trautweiler",
+        "date": "2025-01-02T12:31:43-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "Mastering the Basics: How Linear Regression Unlocks the Secrets of Complex Models",
+        "url": "https://towardsdatascience.com/mastering-the-basics-how-linear-regression-unlocks-the-secrets-of-complex-models-8aa33920c105/",
+        "summary": "Full explanation on Linear Regression and how it learns",
+        "author": "Miguel Cardona Polo",
+        "date": "2025-01-01T17:42:30-05:00",
+        "read_time": "12 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "Unlocking Hidden Potential: Exploring Second-Round Purchasers",
+        "url": "https://towardsdatascience.com/unlocking-hidden-potential-exploring-second-round-purchasers-d47958c4d61c/",
+        "summary": "Finding customer segments for optimal retargetting using LLM embeddings and ML model",
+        "author": "Iqbal Hamdi",
+        "date": "2024-12-09T11:02:18-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "Overcoming Security Challenges in Protecting Shared Generative AI Environments",
+        "url": "https://towardsdatascience.com/overcoming-security-challenges-in-protecting-shared-generative-ai-environments-1ffb27da1bde/",
+        "summary": "Ensuring Safe AI on Multi-Tenancy",
+        "author": "Han HELOIR, Ph.D. ☕️",
+        "date": "2024-12-02T16:17:03-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    },
+    {
+        "title": "The Ultimate Guide to RAGs – Each Component Dissected",
+        "url": "https://towardsdatascience.com/the-ultimate-guide-to-rags-each-component-dissected-3cd51c4c0212/",
+        "summary": "A visual tour of what it takes to build CHAD-level LLM pipelines",
+        "author": "Avishek Biswas",
+        "date": "2024-10-29T23:53:10-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": "sec"
+    }
+]

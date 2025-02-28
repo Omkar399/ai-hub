@@ -1,0 +1,92 @@
+[
+    {
+        "title": "I Won’t Change Unless You Do",
+        "url": "https://towardsdatascience.com/i-wont-change-unless-you-do/",
+        "summary": "Game Theory 101: The Nash equilibrium",
+        "author": "Dorian Drost",
+        "date": "2025-02-28T07:00:00-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "How LLMs Work: Reinforcement Learning, RLHF, DeepSeek R1, OpenAI o1, AlphaGo",
+        "url": "https://towardsdatascience.com/how-llms-work-reinforcement-learning-rlhf-deepseek-r1-openai-o1-alphago/",
+        "summary": "Part 2 of the LLM deep dive",
+        "author": "Clara Chong",
+        "date": "2025-02-27T16:21:24-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "The Dangers of Deceptive Data–Confusing Charts and Misleading Headlines",
+        "url": "https://towardsdatascience.com/the-dangers-of-deceptive-data-confusing-charts-and-misleading-headlines/",
+        "summary": "A deep dive into the ways data can be used to misinform the masses",
+        "author": "Murtaza Ali",
+        "date": "2025-02-26T21:15:25-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "Nine Rules for SIMD Acceleration of Your Rust Code (Part 1)",
+        "url": "https://towardsdatascience.com/nine-rules-for-simd-acceleration-of-your-rust-code-part-1-c16fe639ce21/",
+        "summary": "General Lessons from Boosting Data Ingestion in the range-set-blaze Crate by 7x",
+        "author": "Carl M. Kadie",
+        "date": "2025-02-26T21:03:02-05:00",
+        "read_time": "20 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "LLaDA: The Diffusion Model That Could Redefine Language Generation",
+        "url": "https://towardsdatascience.com/llada-the-diffusion-model-that-could-redefine-language-generation/",
+        "summary": "How LLaDA works, why it matters, and how it could shape the next generation of…",
+        "author": "Maxime Wolf",
+        "date": "2025-02-26T13:18:22-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "When Optimal is the Enemy of Good: High-Budget Differential Privacy for Medical AI",
+        "url": "https://towardsdatascience.com/when-optimal-is-the-enemy-of-good-high-budget-differential-privacy-for-medical-ai/",
+        "summary": "Can we guarantee patient privacy without sacrificing model accuracy?",
+        "author": "Jonathan Yahav",
+        "date": "2025-02-25T20:25:29-05:00",
+        "read_time": "19 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "Efficient Data Handling in Python with Arrow",
+        "url": "https://towardsdatascience.com/efficient-data-handling-in-python-with-arrow/",
+        "summary": "Introducing Arrow to those who are still unaware of its power",
+        "author": "Pol Marin",
+        "date": "2025-02-25T15:56:16-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "Breaking the Bottleneck: GPU-Optimised Video Processing for Deep Learning",
+        "url": "https://towardsdatascience.com/breaking-the-bottleneck-gpu-optimised-video-processing-for-deep-learning/",
+        "summary": "Accelerate your AI video workflows with end-to-end GPU video processing",
+        "author": "David Redó Nieto",
+        "date": "2025-02-25T13:53:22-05:00",
+        "read_time": "3 min read",
+        "page_found": 1,
+        "search_term": "l"
+    },
+    {
+        "title": "Enhancing RAG: Beyond Vanilla Approaches",
+        "url": "https://towardsdatascience.com/enhancing-rag-beyond-vanilla-approaches/",
+        "summary": "Retrieval-Augmented Generation (RAG) is a powerful technique that enhances language models by incorporating external information…",
+        "author": "Ziad SALLOUM",
+        "date": "2025-02-24T20:55:02-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "l"
+    }
+]

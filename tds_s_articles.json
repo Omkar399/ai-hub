@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Announcing the Towards Data Science Author Payment Program",
+        "url": "https://towardsdatascience.com/announcing-the-towards-data-science-author-payment-program/",
+        "summary": "Rewarding contributors for the time and effort required to write great articles",
+        "author": "TDS Editors",
+        "date": "2025-02-28T13:36:45-05:00",
+        "read_time": "3 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "I Won’t Change Unless You Do",
+        "url": "https://towardsdatascience.com/i-wont-change-unless-you-do/",
+        "summary": "Game Theory 101: The Nash equilibrium",
+        "author": "Dorian Drost",
+        "date": "2025-02-28T07:00:00-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "Write for Towards Data Science",
+        "url": "https://towardsdatascience.com/questions-96667b06af5/",
+        "summary": "Quick Links: Why become a contributor? We are looking for writers to propose up-to-date content…",
+        "author": "TDS Editors",
+        "date": "2025-02-27T17:14:27-05:00",
+        "read_time": "23 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "How LLMs Work: Reinforcement Learning, RLHF, DeepSeek R1, OpenAI o1, AlphaGo",
+        "url": "https://towardsdatascience.com/how-llms-work-reinforcement-learning-rlhf-deepseek-r1-openai-o1-alphago/",
+        "summary": "Part 2 of the LLM deep dive",
+        "author": "Clara Chong",
+        "date": "2025-02-27T16:21:24-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "The Dangers of Deceptive Data–Confusing Charts and Misleading Headlines",
+        "url": "https://towardsdatascience.com/the-dangers-of-deceptive-data-confusing-charts-and-misleading-headlines/",
+        "summary": "A deep dive into the ways data can be used to misinform the masses",
+        "author": "Murtaza Ali",
+        "date": "2025-02-26T21:15:25-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "Nine Rules for SIMD Acceleration of Your Rust Code (Part 1)",
+        "url": "https://towardsdatascience.com/nine-rules-for-simd-acceleration-of-your-rust-code-part-1-c16fe639ce21/",
+        "summary": "General Lessons from Boosting Data Ingestion in the range-set-blaze Crate by 7x",
+        "author": "Carl M. Kadie",
+        "date": "2025-02-26T21:03:02-05:00",
+        "read_time": "20 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "LLaDA: The Diffusion Model That Could Redefine Language Generation",
+        "url": "https://towardsdatascience.com/llada-the-diffusion-model-that-could-redefine-language-generation/",
+        "summary": "How LLaDA works, why it matters, and how it could shape the next generation of…",
+        "author": "Maxime Wolf",
+        "date": "2025-02-26T13:18:22-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "When Optimal is the Enemy of Good: High-Budget Differential Privacy for Medical AI",
+        "url": "https://towardsdatascience.com/when-optimal-is-the-enemy-of-good-high-budget-differential-privacy-for-medical-ai/",
+        "summary": "Can we guarantee patient privacy without sacrificing model accuracy?",
+        "author": "Jonathan Yahav",
+        "date": "2025-02-25T20:25:29-05:00",
+        "read_time": "19 min read",
+        "page_found": 1,
+        "search_term": "s"
+    },
+    {
+        "title": "Is Python Set to Surpass Its Competitors?",
+        "url": "https://towardsdatascience.com/is-python-set-to-surpass-its-competitors/",
+        "summary": "The features that make Python the most suitable programming language for most people",
+        "author": "Jiayan Yin",
+        "date": "2025-02-25T19:46:31-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": "s"
+    }
+]

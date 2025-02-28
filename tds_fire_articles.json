@@ -1,0 +1,92 @@
+[
+    {
+        "title": "Showcasing Soaring Wildfire Counts With Streamlit and Python: A Powerful Approach",
+        "url": "https://towardsdatascience.com/showcasing-soaring-wildfire-counts-with-streamlit-and-python-a-powerful-approach-e759b3da1a77/",
+        "summary": "Analyzing historical wildfire trends in Canada with public data",
+        "author": "John Loewen, PhD",
+        "date": "2025-01-18T15:02:15-05:00",
+        "read_time": "13 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "What You Need To Know To Build Large Streamlit Applications With Stripe Subscriptions And Firestore…",
+        "url": "https://towardsdatascience.com/what-you-need-to-know-to-build-large-streamlit-applications-with-stripe-subscriptions-and-firestore-8b76f6370cb2/",
+        "summary": "The ability to turn ideas into software products is a great skill to learn. In…",
+        "author": "Erdogan Taskesen",
+        "date": "2024-08-02T16:07:34-05:00",
+        "read_time": "20 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "Quantifying Burned Areas from Wildfires Using Satellite Imagery",
+        "url": "https://towardsdatascience.com/quantifying-burned-areas-from-wildfires-using-satellite-imagery-97683d025767/",
+        "summary": "Determining the burned area in forests due to wildfires using Sentinel-2 images with Python in…",
+        "author": "Mahyar Aboutalebi, Ph.D. 🎓",
+        "date": "2024-07-22T05:58:37-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "How to Create Your Own CV Dataset Using Satellite Imagery: Wildfires from Space",
+        "url": "https://towardsdatascience.com/how-to-create-your-own-cv-dataset-using-satellite-imagery-wildfires-from-space-8295c0cca028/",
+        "summary": "Collecting images to train CNNs",
+        "author": "Aleksei Rozanov",
+        "date": "2024-05-09T05:18:18-05:00",
+        "read_time": "6 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "Revolutionizing Culinary Experiences with AI: Introducing FIRE (Food Image to REcipe generation) 🔥",
+        "url": "https://towardsdatascience.com/revolutionizing-culinary-experiences-with-ai-introducing-fire-food-image-to-recipe-generation-d7b010ee2eb2/",
+        "summary": "From Visual Delights to Culinary Recipes: How AI Transforms Food Images into Recipes?",
+        "author": "Prateek Chhikara",
+        "date": "2024-01-31T17:48:04-05:00",
+        "read_time": "13 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "Chatbots Caught in the (Legal) Crossfire",
+        "url": "https://towardsdatascience.com/chatbots-caught-in-the-legal-crossfire-6644aaa6954f/",
+        "summary": "Between the GDPR, the AI Act, the DSA and Common Decency",
+        "author": "Tea Mustać",
+        "date": "2023-12-22T16:28:51-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "Essentials for Working With Firestore in Python",
+        "url": "https://towardsdatascience.com/essentials-for-working-with-firestore-in-python-372f859851f7/",
+        "summary": "Learn to manage your Firebase app data in Python",
+        "author": "Lynn G. Kwong",
+        "date": "2022-11-16T02:10:17-05:00",
+        "read_time": "13 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "Using Panel and hvPlot to Visualize Decades of Wildfires",
+        "url": "https://towardsdatascience.com/using-panel-and-hvplot-to-visualize-decades-of-wildfires-2ac8d6f5db25/",
+        "summary": "Let’s build a dashboard to learn more about the millions of wildfires that occurred between…",
+        "author": "Will Norris",
+        "date": "2022-09-08T16:02:53-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    },
+    {
+        "title": "Is Your Data Team Stuck Fighting Fires? Maybe They Should Be.",
+        "url": "https://towardsdatascience.com/is-your-data-team-stuck-fighting-fires-maybe-they-should-be-33a43325e84a/",
+        "summary": "If hiring more data scientists and promoting self-serve reporting isn’t working, there’s an organization structure…",
+        "author": "Ryan Brideau",
+        "date": "2022-06-23T18:25:50-05:00",
+        "read_time": "5 min read",
+        "page_found": 1,
+        "search_term": "fire"
+    }
+]

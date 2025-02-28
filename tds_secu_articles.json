@@ -1,0 +1,92 @@
+[
+    {
+        "title": "How to Enhance SQL Code Security and Maintainability",
+        "url": "https://towardsdatascience.com/how-to-enhance-sql-code-security-and-maintainability-3e398b4dd68e/",
+        "summary": "Introduction to SQL procedures, their applications and benefits, and how to encrypt SQL code",
+        "author": "Jiayan Yin",
+        "date": "2025-01-31T12:02:01-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "How to Securely Connect Microsoft Fabric to Azure Databricks SQL API",
+        "url": "https://towardsdatascience.com/how-to-securely-connect-microsoft-fabric-to-azure-databricks-sql-api-50d363c71104/",
+        "summary": "Integration architecture focusing on security and access control",
+        "author": "René Bremer",
+        "date": "2025-01-07T19:09:46-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "Overcoming Security Challenges in Protecting Shared Generative AI Environments",
+        "url": "https://towardsdatascience.com/overcoming-security-challenges-in-protecting-shared-generative-ai-environments-1ffb27da1bde/",
+        "summary": "Ensuring Safe AI on Multi-Tenancy",
+        "author": "Han HELOIR, Ph.D. ☕️",
+        "date": "2024-12-02T16:17:03-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "Detecting Insecure Code with LLMs",
+        "url": "https://towardsdatascience.com/detecting-insecure-code-with-llms-8b8ad923dd98/",
+        "summary": "Prompt Experiments for Python Vulnerability Detection",
+        "author": "Melanie Hart Buehler",
+        "date": "2024-03-21T23:44:39-05:00",
+        "read_time": "12 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "Building a Secure and Scalable Data and AI Platform",
+        "url": "https://towardsdatascience.com/building-a-secure-and-scalable-data-and-ai-platform-074e191b291f/",
+        "summary": "Empowering business through data-driven decision-making",
+        "author": "Adil Rizvi",
+        "date": "2024-02-22T06:24:08-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "NeMo Guardrails, the Ultimate Open-Source LLM Security Toolkit",
+        "url": "https://towardsdatascience.com/nemo-guardrails-the-ultimate-open-source-llm-security-toolkit-0a34648713ef/",
+        "summary": "Exploring NeMo Guardrails’ practical use cases",
+        "author": "Wenqi Glantz",
+        "date": "2024-02-09T16:49:16-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "How Much Data Do We Need? Balancing Machine Learning with Security Considerations",
+        "url": "https://towardsdatascience.com/how-much-data-do-we-need-balancing-machine-learning-with-security-considerations-a26911f211f6/",
+        "summary": "For a data scientist, there’s no such thing as too much data. But what happens…",
+        "author": "Stephanie Kirmer",
+        "date": "2023-12-15T22:25:54-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "Securing your Containerised Models and Workloads",
+        "url": "https://towardsdatascience.com/securing-your-containerised-models-and-workloads-3bff4d90a07b/",
+        "summary": "Containerisation is now the de facto means of deploying many applications, with Docker being the…",
+        "author": "Jake Teo",
+        "date": "2023-10-24T06:43:12-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    },
+    {
+        "title": "Data Mastery with Python and SQL: Unleashing Efficiency and Security through 4 Strategic Use Cases",
+        "url": "https://towardsdatascience.com/data-mastery-with-python-and-sql-unleashing-efficiency-and-security-through-4-strategic-use-cases-eb8afb5019a0/",
+        "summary": "Leverage techniques to extract hashtags, suppress warnings, and utilize parameterized queries for powerful data analysis",
+        "author": "Subha Ganapathi",
+        "date": "2023-05-23T20:17:22-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "secu"
+    }
+]

@@ -5,11 +5,33 @@ import { addBookmark } from '../services/api';
 const SearchPage = () => {
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState('');
-  const [category, setCategory] = useState('');
-  const [source, setSource] = useState('local'); // Default source is local database
+  const [category, setCategory] = useState('GitHub'); // Selected category
+  const [source, setSource] = useState('github'); // Selected source
   const [error, setError] = useState('');
   const [currentPage, setCurrentPage] = useState(1); // Current page number
   const resultsPerPage = 5; // Number of results per page
+  const [expandedSummaries, setExpandedSummaries] = useState({}); // Track expanded summaries
+
+  // Mapping of categories to their respective sources
+  const categorySourcesMap = {
+    Tutorials: ['goooglesearch'],
+    Research: ['arxiv', 'paperswithcode'],
+    GitHub: ['github'],
+    Courses: ['coursera'],
+    Blogs: ['medium'],
+  };
+
+  useEffect(() => {
+    if (category) {
+      const newSource = categorySourcesMap[category][0];
+      setSource(newSource);
+      // Optionally call fetchResources after the source update uses a callback
+      // This ensures the fetch uses the updated value.
+      // For example, if using an async state updater or useEffect cleanup.
+    } else {
+      setSource('');
+    }
+  }, [category]);
 
   // Function to fetch resources based on query, category, and source
   const fetchResources = async () => {
@@ -32,10 +54,10 @@ const SearchPage = () => {
 
   // Trigger fetchResources whenever query, category, or source changes
   useEffect(() => {
-    if (query || category || source) {
+    if (query || source) {
       fetchResources();
     }
-  }, [query, category, source]); // Dependencies: re-run when these change
+  }, [query, source]); // Dependencies: re-run when these change
 
   // Pagination logic
   const indexOfLastResult = currentPage * resultsPerPage;
@@ -58,6 +80,16 @@ const SearchPage = () => {
 
   // Helper function to map result fields based on the source
   const mapResultFields = (result) => {
+    if (source === 'arxiv') {
+      return {
+        title: result.title,
+        url: result.url,
+        description: result.summary || '', // Full summary
+        published: result.published,
+        source: 'arxiv',
+      };
+    }
+
     if (source === 'paperswithcode') {
       return {
         title: result.title,
@@ -67,6 +99,36 @@ const SearchPage = () => {
       };
     }
 
+    if (source === 'medium' || source === 'Towards Data Science') {
+      return {
+        title: result.title,
+        url: result.url,
+        description: result.summary || '',
+        published: result.date,
+        author: result.author,
+        readTime: result.read_time,
+        source: source,
+      };
+    }
+
+    if (source === 'github') {
+      return {
+        title: result.full_name || result.name,
+        url: result.html_url,
+        description: result.description || '',
+        published: result.created_at,
+        stars: result.stargazers_count,
+        forks: result.forks_count,
+        language: result.language,
+        topics: result.topics || [],
+        updated: result.updated_at,
+        owner: result.owner?.login,
+        avatar: result.owner?.avatar_url,
+        source: 'github',
+      };
+    }
+
+
     // Default mapping for other sources
     return {
       title: result.title,
@@ -74,6 +136,14 @@ const SearchPage = () => {
       description: result.description || result.abstract || result.snippet || '',
       source: source,
     };
+  };
+
+  // Toggle the expanded state of a summary
+  const toggleSummaryExpansion = (index) => {
+    setExpandedSummaries((prev) => ({
+      ...prev,
+      [index]: !prev[index], // Toggle the current state for this index
+    }));
   };
 
   return (
@@ -91,21 +161,24 @@ const SearchPage = () => {
 
       {/* Category Dropdown */}
       <select value={category} onChange={(e) => setCategory(e.target.value)} style={{ marginLeft: '10px', padding: '8px' }}>
-        <option value="">All Categories</option>
-        <option value="Courses">Courses</option>
-        <option value="Handbooks">Handbooks</option>
-        <option value="GitHub">GitHub</option>
-        <option value="Research Papers">Research Papers</option>
-        <option value="Blogs">Blogs</option>
+        <option value="">Select Category</option>
+        {Object.keys(categorySourcesMap).map((cat) => (
+          <option key={cat} value={cat}>
+            {cat}
+          </option>
+        ))}
       </select>
 
       {/* Source Dropdown */}
-      <select value={source} onChange={(e) => setSource(e.target.value)} style={{ marginLeft: '10px', padding: '8px' }}>
-        <option value="local">Local Database</option>
-        <option value="arxiv">arXiv</option>
-        <option value="paperswithcode">PapersWithCode</option>
-        <option value="google">Google Search</option>
-      </select>
+      {category && (
+        <select value={source} onChange={(e) => setSource(e.target.value)} style={{ marginLeft: '10px', padding: '8px' }}>
+          {categorySourcesMap[category].map((src) => (
+            <option key={src} value={src}>
+              {src}
+            </option>
+          ))}
+        </select>
+      )}
 
       {/* Error Message */}
       {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
@@ -128,10 +201,36 @@ const SearchPage = () => {
                 <h3 style={{ marginBottom: '5px' }}>{mappedResult.title}</h3>
               )}
 
-              {/* Abstract/Description */}
+              {/* Collapsed or Expanded Summary */}
               {mappedResult.description && (
                 <p style={{ marginBottom: '5px', color: '#555' }}>
-                  {mappedResult.description}
+                  {expandedSummaries[index]
+                    ? mappedResult.description // Full summary if expanded
+                    : mappedResult.description.slice(0, 200) + (mappedResult.description.length > 200 ? '...' : '')} {/* Collapsed summary */}
+                </p>
+              )}
+
+              {/* Read More / Read Less Button */}
+              {mappedResult.description && mappedResult.description.length > 200 && (
+                <button 
+                  onClick={() => toggleSummaryExpansion(index)}
+                  style={{
+                    backgroundColor: 'transparent',
+                    color: '#007BFF',
+                    border: 'none',
+                    cursor: 'pointer',
+                    textDecoration: 'underline',
+                    fontSize: '14px',
+                  }}
+                >
+                  {expandedSummaries[index] ? 'Read Less' : 'Read More'}
+                </button>
+              )}
+
+              {/* Published Date */}
+              {mappedResult.published && (
+                <p style={{ fontSize: '12px', color: '#888' }}>
+                  Published on: {new Date(mappedResult.published).toLocaleDateString()}
                 </p>
               )}
 
