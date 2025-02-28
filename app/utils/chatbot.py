@@ -14,7 +14,7 @@ class AIAssistant:
     def __init__(self):
         logging.info("🔑 Using Gemini API Key")
         genai.configure(api_key=API_KEY)
-        self.model = genai.GenerativeModel("gemini-pro")
+        self.model = genai.GenerativeModel("gemini-1.5-flash")
 
     def get_response(self, query):
         """Send user query to Gemini AI and return response."""

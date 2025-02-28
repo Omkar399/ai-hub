@@ -2285,5 +2285,15 @@
         "read_time": "11 min read",
         "page_found": 1,
         "search_term": ""
+    },
+    {
+        "title": "Vision Transformers (ViT) Explained: Are They Better Than CNNs?",
+        "url": "https://towardsdatascience.com/vision-transformers-vit-explained-are-they-better-than-cnns/",
+        "summary": "Understanding how a groundbreaking architecture for computer vision tasks works",
+        "author": "Rein Bugnot",
+        "date": "2025-02-28T17:12:11-05:00",
+        "read_time": "18 min read",
+        "page_found": 1,
+        "search_term": ""
     }
 ]
