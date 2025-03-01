@@ -9,6 +9,15 @@ const SubmitResourceForm = ({ userId }) => {
   const [message, setMessage] = useState('');
   const [isButtonHovered, setIsButtonHovered] = useState(false);
 
+  // Category options
+  const categories = [
+    { id: '1', name: 'Courses' },
+    { id: '2', name: 'Handbooks' },
+    { id: '3', name: 'GitHub' },
+    { id: '4', name: 'Research Papers' },
+    { id: '5', name: 'Blogs' }
+  ];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -30,7 +39,7 @@ const SubmitResourceForm = ({ userId }) => {
     }
   };
 
-  // Inline style objects
+  // Inline style objects (unchanged)
   const formStyle = {
     backgroundColor: "#f4f4f4",
     padding: "20px",
@@ -131,17 +140,23 @@ const SubmitResourceForm = ({ userId }) => {
         />
       </div>
 
+      {/* Dropdown selection for categories */}
       <div style={formGroupStyle}>
-        <label htmlFor="categoryId" style={labelStyle}>Category ID</label>
-        <input
+        <label htmlFor="categoryId" style={labelStyle}>Category</label>
+        <select
           id="categoryId"
-          type="text"
-          placeholder="Category ID"
           value={categoryId}
           onChange={(e) => setCategoryId(e.target.value)}
           required
           style={inputStyle}
-        />
+        >
+          <option value="">Select a category</option>
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
+          ))}
+        </select>
       </div>
 
       <button
@@ -152,7 +167,9 @@ const SubmitResourceForm = ({ userId }) => {
       >
         Submit
       </button>
+      
       {message && <p style={messageStyle}>{message}</p>}
+      
     </form>
   );
 };
