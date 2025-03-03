@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+const API_BASE_URL = 'http://44.202.60.5:5000'
 
 const AdminPanel = () => {
     const [pendingResources, setPendingResources] = useState([]);
@@ -8,7 +9,7 @@ const AdminPanel = () => {
     useEffect(() => {
         const fetchPendingResources = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/resources/pending', {
+                const response = await axios.get(`${API_BASE_URL}/api/resources/pending`, {
                     withCredentials: true,
                 });
                 setPendingResources(response.data);
@@ -26,7 +27,7 @@ const AdminPanel = () => {
             // Approve resource
             try {
                 await axios.patch(
-                    `http://localhost:5000/api/resources/${id}`,
+                    `${API_BASE_URL}/api/resources/${id}`,
                     { approved },
                     { withCredentials: true }
                 );
@@ -37,7 +38,7 @@ const AdminPanel = () => {
         } else {
             // Delete resource (reject)
             try {
-                await axios.delete(`http://localhost:5000/api/resources/${id}`, { withCredentials: true });
+                await axios.delete(`${API_BASE_URL}/api/resources/${id}`, { withCredentials: true });
                 setPendingResources(pendingResources.filter((resource) => resource.id !== id));
             } catch (error) {
                 console.error('Failed to delete resource.');

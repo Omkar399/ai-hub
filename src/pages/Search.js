@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { addBookmark } from '../services/api';
+const API_BASE_URL = 'http://44.202.60.5:5000'
 
 const SearchPage = () => {
   const [results, setResults] = useState([]);
@@ -36,7 +37,7 @@ const SearchPage = () => {
   // Function to fetch resources based on query, category, and source
   const fetchResources = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/search', {
+      const response = await axios.get(`${API_BASE_URL}/search`, {
         params: {
           q: query,
           category,

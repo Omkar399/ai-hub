@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+const API_BASE_URL = 'http://44.202.60.5:5000'
 
 const SubmitResourceForm = ({ userId }) => {
   const [title, setTitle] = useState('');
@@ -22,7 +23,7 @@ const SubmitResourceForm = ({ userId }) => {
     e.preventDefault();
     try {
       await axios.post(
-        'http://localhost:5000/api/resources',
+        `${API_BASE_URL}/api/resources`,
         { title, description, url, category_id: categoryId },
         {
           withCredentials: true,

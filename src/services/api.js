@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000';
+// const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'http://44.202.60.5:5000'
 
 // Axios instance for reusable configuration
 const apiClient = axios.create({
@@ -91,7 +92,7 @@ export const getUserBookmarks = async () => {
         console.log('Payload:', payload);
 
         // Make POST request
-        const response = await axios.post('http://localhost:5000/api/bookmarks', payload, {
+        const response = await axios.post(`${API_BASE_URL}/api/bookmarks`, payload, {
             withCredentials: true,
             headers: {
                 'Content-Type': 'application/json',
