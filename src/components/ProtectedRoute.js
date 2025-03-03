@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
+const API_BASE_URL = 'http://44.202.60.5:5000'
+
 
 const ProtectedRoute = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(null); // null indicates loading state
@@ -9,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
         const checkAuth = async () => {
             try {
                 // Call the /auth/check endpoint to verify authentication
-                const response = await axios.get('http://localhost:5000/auth/check', { withCredentials: true });
+                const response = await axios.get(`${API_BASE_URL}/auth/check`, { withCredentials: true });
                 if (response.data.loggedIn) {
                     setIsAuthenticated(true); // User is authenticated
                 } else {
