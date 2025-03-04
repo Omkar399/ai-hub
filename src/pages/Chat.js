@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-const API_BASE_URL = 'http://44.202.60.5:5000'
+import { API_BASE_URL } from '../config';
+import ReactMarkdown from 'react-markdown';
+import { Link } from '@mui/material';
 
 import {
     Container,
@@ -132,10 +134,31 @@ const Chat = () => {
                                     borderRadius: 2,
                                 }}
                             >
-                                <Typography variant="body1">
-                                    {message.text}
-                                </Typography>
-                                <Typography variant="caption" sx={{ opacity: 0.7 }}>
+                                {message.sender === 'user' ? (
+                                    <Typography variant="body1">{message.text}</Typography>
+                                ) : (
+                                    <ReactMarkdown
+                                        components={{
+                                            p: (props) => <Typography variant="body1" gutterBottom {...props} />,
+                                            h1: (props) => <Typography variant="h5" gutterBottom {...props} />,
+                                            h2: (props) => <Typography variant="h6" gutterBottom {...props} />,
+                                            h3: (props) => <Typography variant="subtitle1" gutterBottom {...props} />,
+                                            ul: (props) => <Box component="ul" sx={{ pl: 2 }} {...props} />,
+                                            li: (props) => <Typography component="li" variant="body1" gutterBottom {...props} />,
+                                            a: (props) => (
+                                                <Link
+                                                    {...props}
+                                                    sx={{ color: 'primary.main' }}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                />
+                                            ),
+                                        }}
+                                    >
+                                        {message.text}
+                                    </ReactMarkdown>
+                                )}
+                                <Typography variant="caption" sx={{ opacity: 0.7, display: 'block', mt: 1 }}>
                                     {new Date(message.timestamp).toLocaleTimeString()}
                                 </Typography>
                             </Paper>

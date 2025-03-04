@@ -45,29 +45,85 @@ const Dashboard = () => {
 
             <Tabs value={activeTab} onChange={(e, newValue) => setActiveTab(newValue)} sx={{ mb: 3 }}>
                 <Tab label="Bookmarks" value="bookmarks" />
-                <Tab label="Progress" value="progress" />
-                <Tab label="Notes" value="notes" />
             </Tabs>
 
             {/* Bookmark Cards */}
             <Grid container spacing={3}>
                 {bookmarks.map((bookmark) => (
                     <Grid item xs={12} md={6} key={bookmark.id}>
-                        <Card>
+                        <Card sx={{ height: '100%' }}>
                             <CardContent>
-                                <Typography variant="h6">{bookmark.title}</Typography>
-                                <Typography color="textSecondary">
+                                <Typography 
+                                    variant="h6" 
+                                    component="a" 
+                                    href={bookmark.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{
+                                        textDecoration: 'none',
+                                        color: 'primary.main',
+                                        '&:hover': {
+                                            textDecoration: 'underline'
+                                        }
+                                    }}
+                                >
+                                    {bookmark.title}
+                                </Typography>
+                                <Typography 
+                                    variant="subtitle2" 
+                                    color="textSecondary" 
+                                    sx={{ mt: 1 }}
+                                >
+                                    Added on: {new Date(bookmark.createdAt).toLocaleDateString()}
+                                </Typography>
+                                <Typography 
+                                    color="textSecondary" 
+                                    sx={{ mt: 2, mb: 2 }}
+                                >
                                     {bookmark.description}
                                 </Typography>
-                                {/* Delete Button */}
-                                <Button
-                                    variant="contained"
-                                    color="error"
-                                    onClick={() => handleDeleteBookmark(bookmark.id)}
-                                    sx={{ mt: 2 }}
-                                >
-                                    Delete
-                                </Button>
+                                <Box sx={{ mt: 2 }}>
+                                    {bookmark.tags && bookmark.tags.map((tag, index) => (
+                                        <Typography
+                                            key={index}
+                                            component="span"
+                                            sx={{
+                                                backgroundColor: 'primary.light',
+                                                color: 'primary.contrastText',
+                                                padding: '4px 8px',
+                                                borderRadius: '16px',
+                                                marginRight: 1,
+                                                marginBottom: 1,
+                                                display: 'inline-block',
+                                                fontSize: '0.875rem'
+                                            }}
+                                        >
+                                            {tag}
+                                        </Typography>
+                                    ))}
+                                </Box>
+                                <Box sx={{ 
+                                    display: 'flex', 
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    mt: 2 
+                                }}>
+                                    <Button
+                                        variant="outlined"
+                                        href={bookmark.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Visit Resource
+                                    </Button>
+                                    <Button
+                                        variant="contained"
+                                        color="error"
+                                        onClick={() => handleDeleteBookmark(bookmark.id)}
+                                    >
+                                        Delete
+                                    </Button>
+                                </Box>
                             </CardContent>
                         </Card>
                     </Grid>

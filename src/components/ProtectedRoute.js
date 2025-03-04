@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
-const API_BASE_URL = 'http://44.202.60.5:5000'
-
+import { API_BASE_URL } from '../config';
 
 const ProtectedRoute = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(null); // null indicates loading state

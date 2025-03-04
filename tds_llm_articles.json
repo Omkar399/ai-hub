@@ -88,5 +88,15 @@
         "read_time": "8 min read",
         "page_found": 1,
         "search_term": "llm"
+    },
+    {
+        "title": "LLM + RAG: Creating an AI-Powered File Reader Assistant",
+        "url": "https://towardsdatascience.com/llm-rag-creating-an-ai-powered-file-reader-assistant/",
+        "summary": "How to create a chatbot to answer questions about file’s content",
+        "author": "Gustavo Santos",
+        "date": "2025-03-03T16:02:28-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "LLM"
     }
 ]

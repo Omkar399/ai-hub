@@ -14,8 +14,6 @@ import SubmitResourceForm from './pages/SubmitResourceForm'; // Import Submit Re
 import AdminPanel from './pages/AdminPanel'; // Import Admin Panel
 import ProtectedRoute from './components/ProtectedRoute';
 
-const API_BASE_URL = 'http://44.202.60.5:5000'
-
 const theme = createTheme({
     palette: {
         primary: {

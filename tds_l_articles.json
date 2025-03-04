@@ -88,5 +88,55 @@
         "read_time": "7 min read",
         "page_found": 1,
         "search_term": "l"
+    },
+    {
+        "title": "LLM + RAG: Creating an AI-Powered File Reader Assistant",
+        "url": "https://towardsdatascience.com/llm-rag-creating-an-ai-powered-file-reader-assistant/",
+        "summary": "How to create a chatbot to answer questions about file’s content",
+        "author": "Gustavo Santos",
+        "date": "2025-03-03T16:02:28-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": "L"
+    },
+    {
+        "title": "Data Science: From School to Work, Part II",
+        "url": "https://towardsdatascience.com/data-science-from-school-to-work-part-ii/",
+        "summary": "How to write clean Python code",
+        "author": "Vincent Margot",
+        "date": "2025-03-03T09:00:00-05:00",
+        "read_time": "17 min read",
+        "page_found": 1,
+        "search_term": "L"
+    },
+    {
+        "title": "Avoidable and Unavoidable Randomness in GPT-4o",
+        "url": "https://towardsdatascience.com/avoidable-and-unavoidable-randomness-in-gpt-4o/",
+        "summary": "Exploring the sources of randomness in GPT-4o from the known and controllable to the opaque…",
+        "author": "Vincent Vatter",
+        "date": "2025-03-03T07:00:00-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": "L"
+    },
+    {
+        "title": "Vision Transformers (ViT) Explained: Are They Better Than CNNs?",
+        "url": "https://towardsdatascience.com/vision-transformers-vit-explained-are-they-better-than-cnns/",
+        "summary": "Understanding how a groundbreaking architecture for computer vision tasks works",
+        "author": "Rein Bugnot",
+        "date": "2025-02-28T17:12:11-05:00",
+        "read_time": "18 min read",
+        "page_found": 1,
+        "search_term": "L"
+    },
+    {
+        "title": "Unraveling Large Language Model Hallucinations",
+        "url": "https://towardsdatascience.com/unraveling-large-language-model-hallucinations/",
+        "summary": "Understanding hallucinations as emergent cognitive effects of the training pipeline",
+        "author": "Prashal Ruchiranga",
+        "date": "2025-02-28T15:15:37-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": "L"
     }
 ]

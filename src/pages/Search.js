@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { addBookmark } from '../services/api';
-const API_BASE_URL = 'http://44.202.60.5:5000'
+import { API_BASE_URL } from '../config';
 
 const SearchPage = () => {
   const [results, setResults] = useState([]);
