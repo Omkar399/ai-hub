@@ -1,0 +1,131 @@
+# AI Learning Hub - User Guide
+
+## Overview
+AI Learning Hub is a comprehensive platform for discovering, organizing, and sharing AI learning resources. The platform integrates various sources including research papers, tutorials, GitHub repositories, and online courses.
+
+## Features
+
+### 1. Resource Discovery
+
+#### Search
+- Access the search page via the navigation bar
+- Filter resources by category:
+  - Tutorials
+  - Courses
+  - Research Papers
+  - GitHub Projects
+- Use the search bar to find specific topics
+- Results are paginated for easy browsing
+
+#### Knowledge Base
+- Browse curated AI learning materials
+- Resources are pre-approved by administrators
+- Filter by categories and search within the knowledge base
+
+#### GitHub Explorer
+- Discover trending AI repositories
+- View repository details including:
+  - Description
+  - Stars
+  - Last update
+  - Programming language
+- Bookmark interesting repositories for later reference
+
+### 2. User Features
+
+#### Authentication
+- **Sign Up**: Create a new account with username, email, and password
+- **Login**: Access your personal dashboard and bookmarks
+- **Logout**: Securely end your session
+
+#### Dashboard
+- View your bookmarked resources
+- Track your learning progress
+- Manage your submitted resources
+
+#### Bookmarks
+- Save resources for later reference
+- Available for:
+  - Knowledge base articles
+  - GitHub repositories
+  - Search results
+- Access bookmarks from your dashboard
+
+### 3. Resource Submission
+
+#### Submit New Resources
+1. Login to your account
+2. Click "Submit Resource" in the navigation bar
+3. Fill in the resource details:
+   - Title
+   - Description
+   - URL
+   - Category
+4. Submit for admin approval
+
+### 4. Admin Features
+
+#### Admin Panel
+- Access restricted to admin users
+- Review submitted resources
+- Approve or reject submissions
+- Manage existing resources
+
+## API Integration
+
+The platform integrates with multiple external APIs:
+- arXiv for research papers
+- GitHub for repositories
+- Coursera for online courses
+- Google Custom Search for tutorials
+- Papers with Code for ML implementations
+
+## Technical Requirements
+
+### Frontend
+- Modern web browser with JavaScript enabled
+- Recommended browsers:
+  - Chrome (latest version)
+  - Firefox (latest version)
+  - Safari (latest version)
+
+### Backend
+- API endpoint: Development - `http://localhost:5000`
+- API endpoint: Production - `http://44.202.60.5:5000`
+
+## Error Handling
+
+- Authentication errors redirect to the login page
+- Search errors display user-friendly error messages
+- Network issues show appropriate error notifications
+
+## Best Practices
+
+1. **Resource Discovery**
+   - Use specific search terms for better results
+   - Filter by category to narrow down results
+   - Check multiple sources for comprehensive learning
+
+2. **Resource Submission**
+   - Provide detailed descriptions
+   - Include accurate URLs
+   - Select appropriate categories
+
+3. **Bookmarking**
+   - Organize resources by topic
+   - Regular cleanup of outdated bookmarks
+   - Use bookmarks for creating learning paths
+
+## Support
+
+For technical issues or questions:
+- Check the error messages for specific guidance
+- Contact the administrator for access issues
+- Report bugs through the appropriate channels
+
+## Security
+
+- Secure authentication system
+- Protected routes for authenticated users
+- Admin-only access for sensitive operations
+- Secure API endpoints with proper authentication

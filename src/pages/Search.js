@@ -187,65 +187,110 @@ const SearchPage = () => {
       {/* Results List */}
       <ul style={{ listStyleType: 'none', padding: '0', marginTop: '20px' }}>
         {currentResults.map((result, index) => {
-          const mappedResult = mapResultFields(result); // Map fields based on the source
+          const mappedResult = mapResultFields(result);
+
+          // Only show detailed GitHub info for GitHub results
+          const isGithubResult = mappedResult.source === 'github';
 
           return (
-            <li key={index} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
-              {/* Title as a Hyperlink */}
-              {mappedResult.url ? (
-                <h3 style={{ marginBottom: '5px' }}>
-                  <a href={mappedResult.url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF', textDecoration: 'none' }}>
+            <li key={index} style={{
+              marginBottom: '20px',
+              padding: '20px',
+              borderRadius: '8px',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+              backgroundColor: '#fff'
+            }}>
+              {/* Title */}
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                <h3 style={{ margin: 0, marginRight: '10px' }}>
+                  <a href={mappedResult.url}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     style={{ color: '#007BFF', textDecoration: 'none' }}>
                     {mappedResult.title}
                   </a>
                 </h3>
-              ) : (
-                <h3 style={{ marginBottom: '5px' }}>{mappedResult.title}</h3>
+              </div>
+
+              {/* GitHub-specific stats */}
+              {isGithubResult && (
+                <div style={{
+                  display: 'flex',
+                  gap: '15px',
+                  marginBottom: '10px',
+                  fontSize: '14px',
+                  color: '#666'
+                }}>
+                  <span>⭐ {mappedResult.stars.toLocaleString()} stars</span>
+                  <span>🔄 {mappedResult.forks.toLocaleString()} forks</span>
+                  {mappedResult.language && (
+                    <span>📝 {mappedResult.language}</span>
+                  )}
+                </div>
               )}
 
-              {/* Collapsed or Expanded Summary */}
+              {/* Description */}
               {mappedResult.description && (
-                <p style={{ marginBottom: '5px', color: '#555' }}>
+                <p style={{
+                  marginBottom: '15px',
+                  color: '#444',
+                  lineHeight: '1.5'
+                }}>
                   {expandedSummaries[index]
-                    ? mappedResult.description // Full summary if expanded
-                    : mappedResult.description.slice(0, 200) + (mappedResult.description.length > 200 ? '...' : '')} {/* Collapsed summary */}
+                    ? mappedResult.description
+                    : mappedResult.description.slice(0, 200) +
+                      (mappedResult.description.length > 200 ? '...' : '')}
                 </p>
               )}
 
-              {/* Read More / Read Less Button */}
-              {mappedResult.description && mappedResult.description.length > 200 && (
-                <button 
-                  onClick={() => toggleSummaryExpansion(index)}
-                  style={{
-                    backgroundColor: 'transparent',
-                    color: '#007BFF',
-                    border: 'none',
-                    cursor: 'pointer',
-                    textDecoration: 'underline',
-                    fontSize: '14px',
-                  }}
-                >
-                  {expandedSummaries[index] ? 'Read Less' : 'Read More'}
+              {/* GitHub Topics */}
+              {isGithubResult && mappedResult.topics && mappedResult.topics.length > 0 && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '15px' }}>
+                  {mappedResult.topics.map((topic, i) => (
+                    <span key={i} style={{
+                      backgroundColor: '#f1f8ff',
+                      color: '#0366d6',
+                      padding: '3px 10px',
+                      borderRadius: '12px',
+                      fontSize: '12px'
+                    }}>
+                      {topic}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button onClick={() => addBookmark(mappedResult)} style={{
+                  backgroundColor: '#007BFF',
+                  color: '#fff',
+                  borderRadius: '5px',
+                  border: 'none',
+                  padding: '8px 16px',
+                  cursor: 'pointer',
+                  fontSize: '14px'
+                }}>
+                  Bookmark
                 </button>
-              )}
-
-              {/* Published Date */}
-              {mappedResult.published && (
-                <p style={{ fontSize: '12px', color: '#888' }}>
-                  Published on: {new Date(mappedResult.published).toLocaleDateString()}
-                </p>
-              )}
-
-              {/* Bookmark Button */}
-              <button onClick={() => addBookmark(mappedResult)} style={{
-                backgroundColor: '#007BFF',
-                color: '#fff',
-                borderRadius: '5px',
-                border: 'none',
-                padding: '8px',
-                cursor: 'pointer'
-              }}>
-                Bookmark
-              </button>
+                {isGithubResult && (
+                  <a href={`${mappedResult.url}/network/members`}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     style={{
+                       backgroundColor: '#28a745',
+                       color: '#fff',
+                       borderRadius: '5px',
+                       border: 'none',
+                       padding: '8px 16px',
+                       cursor: 'pointer',
+                       fontSize: '14px',
+                       textDecoration: 'none'
+                     }}>
+                    View Contributors
+                  </a>
+                )}
+              </div>
             </li>
           );
         })}

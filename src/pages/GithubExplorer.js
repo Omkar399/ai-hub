@@ -56,40 +56,110 @@ const GithubExplorer = () => {
 
             {/* Repositories List */}
             <ul style={{ listStyleType: 'none', padding: '0', marginTop: '20px' }}>
-                {currentResults.map((repo) => {
-                    const mappedRepo = mapRepoFields(repo); // Map repo fields for consistency
-
+                {currentResults.map((repo, index) => {
+                    const mappedRepo = mapRepoFields(repo);
                     return (
-                        <li key={repo.id} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
-                            {/* Title as a Hyperlink */}
-                            <h3 style={{ marginBottom: '5px' }}>
-                                <a href={mappedRepo.url} target="_blank" rel="noopener noreferrer" style={{ color: '#007BFF', textDecoration: 'none' }}>
-                                    {mappedRepo.title}
-                                </a>
-                            </h3>
+                        <li key={repo.id} style={{
+                            marginBottom: '20px',
+                            padding: '20px',
+                            borderRadius: '8px',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                            backgroundColor: '#fff'
+                        }}>
+                            {/* Repository Title and Link */}
+                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                                <h3 style={{ margin: 0, marginRight: '10px' }}>
+                                    <a href={mappedRepo.url} 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       style={{ color: '#007BFF', textDecoration: 'none' }}>
+                                        {mappedRepo.title}
+                                    </a>
+                                </h3>
+                            </div>
+
+                            {/* Repository Stats */}
+                            <div style={{ 
+                                display: 'flex', 
+                                gap: '15px', 
+                                marginBottom: '10px',
+                                fontSize: '14px',
+                                color: '#666' 
+                            }}>
+                                <span>⭐ {repo.stargazers_count.toLocaleString()} stars</span>
+                                <span>🔄 {repo.forks_count.toLocaleString()} forks</span>
+                                {repo.language && (
+                                    <span>📝 {repo.language}</span>
+                                )}
+                            </div>
 
                             {/* Description */}
                             {mappedRepo.description && (
-                                <p style={{ marginBottom: '5px', color: '#555' }}>
-                                    {mappedRepo.description}
+                                <p style={{ 
+                                    marginBottom: '15px',
+                                    color: '#444',
+                                    lineHeight: '1.5'
+                                }}>
+                                    {repo.description.slice(0, 200) + 
+                                      (repo.description.length > 200 ? '...' : '')}
                                 </p>
                             )}
 
-                            {/* Stars and Owner */}
-                            <p style={{ marginBottom: '5px', color: '#555' }}>⭐ Stars: {repo.stargazers_count}</p>
-                            <p style={{ marginBottom: '5px', color: '#555' }}>👨‍💻 Owner: {repo.owner.login}</p>
+                            {/* Topics/Tags */}
+                            {repo.topics && repo.topics.length > 0 && (
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '15px' }}>
+                                    {repo.topics.map((topic, i) => (
+                                        <span key={i} style={{
+                                            backgroundColor: '#f1f8ff',
+                                            color: '#0366d6',
+                                            padding: '3px 10px',
+                                            borderRadius: '12px',
+                                            fontSize: '12px'
+                                        }}>
+                                            {topic}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
 
-                            {/* Bookmark Button */}
-                            <button onClick={() => addBookmark(mappedRepo)} style={{
-                                backgroundColor: '#007BFF',
-                                color: '#fff',
-                                borderRadius: '5px',
-                                border: 'none',
-                                padding: '8px',
-                                cursor: 'pointer'
+                            {/* Last Updated */}
+                            <div style={{ 
+                                fontSize: '13px',
+                                color: '#666',
+                                marginBottom: '15px'
                             }}>
-                                Bookmark
-                            </button>
+                                Last updated: {new Date(repo.updated_at).toLocaleDateString()}
+                            </div>
+
+                            {/* Action Buttons */}
+                            <div style={{ display: 'flex', gap: '10px' }}>
+                                <button onClick={() => addBookmark(mappedRepo)} style={{
+                                    backgroundColor: '#007BFF',
+                                    color: '#fff',
+                                    borderRadius: '5px',
+                                    border: 'none',
+                                    padding: '8px 16px',
+                                    cursor: 'pointer',
+                                    fontSize: '14px'
+                                }}>
+                                    Bookmark
+                                </button>
+                                <a href={`${mappedRepo.url}/network/members`}
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   style={{
+                                       backgroundColor: '#28a745',
+                                       color: '#fff',
+                                       borderRadius: '5px',
+                                       border: 'none',
+                                       padding: '8px 16px',
+                                       cursor: 'pointer',
+                                       fontSize: '14px',
+                                       textDecoration: 'none'
+                                   }}>
+                                    View Contributors
+                                </a>
+                            </div>
                         </li>
                     );
                 })}
