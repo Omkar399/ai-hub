@@ -2335,5 +2335,15 @@
         "read_time": "14 min read",
         "page_found": 1,
         "search_term": ""
+    },
+    {
+        "title": "How to Train LLMs to “Think” (o1 & DeepSeek-R1)",
+        "url": "https://towardsdatascience.com/how-to-train-llms-to-think-o1-deepseek-r1/",
+        "summary": "Advanced reasoning models explained",
+        "author": "Shaw Talebi",
+        "date": "2025-03-03T20:31:34-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": ""
     }
 ]

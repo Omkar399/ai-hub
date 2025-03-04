@@ -81,62 +81,63 @@ const SearchPage = () => {
 
   // Helper function to map result fields based on the source
   const mapResultFields = (result) => {
-    if (source === 'arxiv') {
-      return {
-        title: result.title,
-        url: result.url,
-        description: result.summary || '', // Full summary
-        published: result.published,
-        source: 'arxiv',
-      };
+    // Common fields that should be present for all types
+    const baseFields = {
+        title: result.title || result.name || '',
+        url: result.url || result.html_url || result.link || '',
+        description: result.description || result.summary || result.abstract || result.snippet || '',
+        source: source,
+    };
+
+    // Add source-specific fields
+    if (source === 'github') {
+        return {
+            ...baseFields,
+            title: result.full_name || result.name,
+            url: result.html_url,
+            description: result.description || '',
+            stars: result.stargazers_count || 0,
+            forks: result.forks_count || 0,
+            language: result.language,
+            topics: result.topics || [],
+            updated: result.updated_at,
+            owner: result.owner?.login,
+            avatar: result.owner?.avatar_url,
+            source: 'github',
+        };
     }
 
-    if (source === 'paperswithcode') {
-      return {
-        title: result.title,
-        url: result.code_url || result.repository_url, // Prefer code_url; fallback to repository_url
-        description: result.abstract || '', // Use abstract for description
-        source: 'paperswithcode',
-      };
+    if (source === 'arxiv') {
+        return {
+            ...baseFields,
+            published: result.published,
+            authors: result.authors || [],
+            source: 'arxiv',
+        };
     }
 
     if (source === 'medium' || source === 'Towards Data Science') {
-      return {
-        title: result.title,
-        url: result.url,
-        description: result.summary || '',
-        published: result.date,
-        author: result.author,
-        readTime: result.read_time,
-        source: source,
-      };
+        return {
+            ...baseFields,
+            author: result.author,
+            published: result.date,
+            readTime: result.read_time,
+            source: source,
+        };
     }
 
-    if (source === 'github') {
-      return {
-        title: result.full_name || result.name,
-        url: result.html_url,
-        description: result.description || '',
-        published: result.created_at,
-        stars: result.stargazers_count,
-        forks: result.forks_count,
-        language: result.language,
-        topics: result.topics || [],
-        updated: result.updated_at,
-        owner: result.owner?.login,
-        avatar: result.owner?.avatar_url,
-        source: 'github',
-      };
+    if (source === 'coursera') {
+        return {
+            ...baseFields,
+            provider: result.provider,
+            duration: result.duration,
+            level: result.level,
+            source: 'coursera',
+        };
     }
 
-
-    // Default mapping for other sources
-    return {
-      title: result.title,
-      url: result.url || result.link,
-      description: result.description || result.abstract || result.snippet || '',
-      source: source,
-    };
+    // Return base fields for any other source
+    return baseFields;
   };
 
   // Toggle the expanded state of a summary
@@ -212,7 +213,7 @@ const SearchPage = () => {
                 </h3>
               </div>
 
-              {/* GitHub-specific stats */}
+              {/* Source-specific stats */}
               {isGithubResult && (
                 <div style={{
                   display: 'flex',
@@ -241,6 +242,13 @@ const SearchPage = () => {
                     : mappedResult.description.slice(0, 200) +
                       (mappedResult.description.length > 200 ? '...' : '')}
                 </p>
+              )}
+
+              {/* Source-specific metadata */}
+              {mappedResult.published && (
+                <div style={{ fontSize: '14px', color: '#666', marginBottom: '10px' }}>
+                  Published: {new Date(mappedResult.published).toLocaleDateString()}
+                </div>
               )}
 
               {/* GitHub Topics */}
