@@ -2345,5 +2345,25 @@
         "read_time": "11 min read",
         "page_found": 1,
         "search_term": ""
+    },
+    {
+        "title": "Mastering 1:1s as a Data Scientist: From Status Updates to Career Growth",
+        "url": "https://towardsdatascience.com/mastering-11s-as-a-data-scientist-from-status-updates-to-career-growth/",
+        "summary": "Use your 1:1s to gain visibility, solve challenges, and advance your career",
+        "author": "Yu Dong",
+        "date": "2025-03-04T14:12:13-05:00",
+        "read_time": "8 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "The Urgent Need for Intrinsic Alignment Technologies for Responsible Agentic AI",
+        "url": "https://towardsdatascience.com/the-urgent-need-for-intrinsic-alignment-technologies-for-responsible-agentic-ai/",
+        "summary": "Rethinking AI alignment and safety in the age of deep scheming",
+        "author": "Gadi Singer",
+        "date": "2025-03-04T07:00:00-05:00",
+        "read_time": "21 min read",
+        "page_found": 1,
+        "search_term": ""
     }
 ]
