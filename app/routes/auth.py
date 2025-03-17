@@ -6,8 +6,13 @@ from flask_cors import CORS
 
 bp = Blueprint('auth', __name__)
 
-# Configure CORS for the blueprint
-CORS(bp, supports_credentials=True, origins=['*'])  # Replace with your actual frontend domain
+# Configure CORS for the blueprint with your Vercel domain
+CORS(bp, 
+     supports_credentials=True, 
+     origins=['https://aihub-omkar399-omkar399s-projects.vercel.app'],
+     methods=['GET', 'POST', 'OPTIONS'],
+     allow_headers=['Content-Type', 'Authorization']
+)
 
 @bp.route('/register', methods=['POST'])
 def register():
