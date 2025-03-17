@@ -19,8 +19,13 @@ def create_app():
     app.config.from_object(Config)
     app.config['SECRET_KEY'] = 'your_secret_key'  # Required for signing session cookies
     app.config['SESSION_COOKIE_HTTPONLY'] = True  # Prevent JavaScript access to cookies
-    app.config['SESSION_COOKIE_SECURE'] = False  # Set to True if using HTTPS
-    app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+    app.config['SESSION_COOKIE_SECURE'] = True  # Set to True if using HTTPS
+    app.config['SESSION_COOKIE_SAMESITE'] = 'None'
+
+    app.config.update(
+        REMEMBER_COOKIE_SECURE=True,
+        REMEMBER_COOKIE_SAMESITE='None',
+    )
     # Initialize extensions with the app instance
     db.init_app(app)
     migrate.init_app(app, db)  # Bind Flask-Migrate to app and db
