@@ -45,7 +45,7 @@ def create_app():
          resources={
              r"/*": {
                  "origins": ["*"],
-                 "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+                 "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
                  "allow_headers": ["Content-Type", "Authorization"],
                  "supports_credentials": True,
                  "expose_headers": ["Access-Control-Allow-Origin"]
@@ -60,7 +60,7 @@ def create_app():
         response.headers.update({
             'Access-Control-Allow-Origin': origin,
             'Access-Control-Allow-Credentials': 'true',
-            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, PATCH',
             'Access-Control-Allow-Headers': 'Content-Type, Authorization',
             'Vary': 'Origin'
         })
