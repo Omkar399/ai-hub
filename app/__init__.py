@@ -44,7 +44,7 @@ def create_app():
     CORS(app, 
          resources={
              r"/*": {
-                 "origins": ["https://aihub-omkar399-omkar399s-projects.vercel.app"],
+                 "origins": ["*"],
                  "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
                  "allow_headers": ["Content-Type", "Authorization"],
                  "supports_credentials": True,
@@ -57,14 +57,13 @@ def create_app():
     @app.after_request
     def after_request(response):
         origin = request.headers.get('Origin')
-        if origin == 'https://aihub-omkar399-omkar399s-projects.vercel.app':
-            response.headers.update({
-                'Access-Control-Allow-Origin': origin,
-                'Access-Control-Allow-Credentials': 'true',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-                'Vary': 'Origin'
-            })
+        response.headers.update({
+            'Access-Control-Allow-Origin': origin,
+            'Access-Control-Allow-Credentials': 'true',
+            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            'Vary': 'Origin'
+        })
         return response
 
     # Register blueprints
