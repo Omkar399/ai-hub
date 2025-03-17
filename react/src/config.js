@@ -4,7 +4,7 @@ const config = {
         API_BASE_URL: 'http://localhost:5000'
     },
     production: {
-        API_BASE_URL: 'http://44.202.60.5:5000'
+        API_BASE_URL: 'https://ai-hub-v4s7.onrender.com'
     }
 };
 
