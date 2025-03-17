@@ -4,7 +4,7 @@ from app.models.resource import Resource
 from app import db
 
 # Load API Key
-API_KEY = ""
+API_KEY = "AIzaSyD4zk4W44zJo4Z0-B8l7Dwe8hgvRVMLy3Y"
 
 if not API_KEY:
     raise ValueError("❌ GEMINI_API_KEY is missing. Set it in environment variables.")
