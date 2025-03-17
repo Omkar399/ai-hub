@@ -38,24 +38,24 @@ def chat():
     try:
         bot_response = assistant.get_response(user_input)
         logging.info(f"📝 User: {user_input} → 🤖 AI: {bot_response}")
-        return _corsify_actual_response(jsonify({"response": bot_response}))
+        return jsonify({"response": bot_response})
     except Exception as e:
         logging.error(f"❌ AI Processing Error: {e}")
-        return _corsify_actual_response(jsonify({"response": f"Error: {str(e)}"})), 500
+        return jsonify({"response": f"Error: {str(e)}"}), 500
 
 
-def _build_cors_preflight_response():
-    """Handles CORS preflight OPTIONS requests"""
-    response = jsonify({"message": "CORS preflight successful"})
-    response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
-    response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
-    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-    response.headers["Access-Control-Allow-Credentials"] = "true"
-    return response, 200
+# def _build_cors_preflight_response():
+#     """Handles CORS preflight OPTIONS requests"""
+#     response = jsonify({"message": "CORS preflight successful"})
+#     response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
+#     response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+#     response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+#     response.headers["Access-Control-Allow-Credentials"] = "true"
+#     return response, 200
 
 
-def _corsify_actual_response(response):
-    """Adds CORS headers to actual responses"""
-    response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
-    response.headers["Access-Control-Allow-Credentials"] = "true"
-    return response
+# def _corsify_actual_response(response):
+#     """Adds CORS headers to actual responses"""
+#     response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
+#     response.headers["Access-Control-Allow-Credentials"] = "true"
+#     return response

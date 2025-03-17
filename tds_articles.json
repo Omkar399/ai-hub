@@ -2365,5 +2365,205 @@
         "read_time": "21 min read",
         "page_found": 1,
         "search_term": ""
+    },
+    {
+        "title": "Mastering Hadoop, Part 3: Hadoop Ecosystem: Get the most out of your cluster",
+        "url": "https://towardsdatascience.com/mastering-hadoop-part-3-hadoop-ecosystem-get-the-most-out-of-your-cluster/",
+        "summary": "Exploring the Hadoop ecosystem — key tools to maximize your cluster’s potential",
+        "author": "Niklas Lang",
+        "date": "2025-03-14T20:20:01-05:00",
+        "read_time": "24 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "The Impact of GenAI and Its Implications for Data Scientists",
+        "url": "https://towardsdatascience.com/the-impact-of-genai-and-its-implications-for-data-scientists/",
+        "summary": "What we can learn from Anthropic’s analysis of millions of Claude.ai chats",
+        "author": "Jonte Dancker",
+        "date": "2025-03-14T17:56:09-05:00",
+        "read_time": "5 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Mastering Prompt Engineering with Functional Testing: A Systematic Guide to Reliable LLM Outputs",
+        "url": "https://towardsdatascience.com/mastering-prompt-engineering-with-functional-testing-a-systematic-guide-to-reliable-llm-outputs/",
+        "summary": "How prompt evaluation with a systematic approach composed of algorithmic testing with input/output data fixtures…",
+        "author": "Ugo Pradère",
+        "date": "2025-03-14T17:48:00-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Nine Pico PIO Wats with Rust (Part 2)",
+        "url": "https://towardsdatascience.com/nine-pico-pio-wats-with-rust-part-2/",
+        "summary": "Raspberry Pi programmable IO pitfalls illustrated with a musical example",
+        "author": "Carl M. Kadie",
+        "date": "2025-03-14T13:45:53-05:00",
+        "read_time": "17 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Forget About Cloud Computing. On-Premises Is All the Rage Again",
+        "url": "https://towardsdatascience.com/forget-about-cloud-computing-on-premises-is-all-the-rage-again/",
+        "summary": "From startups to enterprise, companies are lowering costs and regaining control over their operations",
+        "author": "Ari Joury, PhD",
+        "date": "2025-03-14T13:19:36-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Effortless Spreadsheet Normalisation With LLM",
+        "url": "https://towardsdatascience.com/effortless-spreadsheet-normalisation-with-llm/",
+        "summary": "Clean data, clear insights: The LLM workflow for reshaping spreadsheets",
+        "author": "Simon Grah",
+        "date": "2025-03-14T13:10:04-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "One Turn After Another",
+        "url": "https://towardsdatascience.com/one-turn-after-another/",
+        "summary": "Game theory 101: Dynamic games",
+        "author": "Dorian Drost",
+        "date": "2025-03-14T11:54:43-05:00",
+        "read_time": "15 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Essential Review Papers on Physics-Informed Neural Networks: A Curated Guide for Practitioners",
+        "url": "https://towardsdatascience.com/essential-review-papers-on-physics-informed-neural-networks-a-curated-guide-for-practitioners/",
+        "summary": "Skip the noise and focus on what really matters in PINN development",
+        "author": "Shuai Guo",
+        "date": "2025-03-13T22:54:40-05:00",
+        "read_time": "14 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Anatomy of a Parquet File",
+        "url": "https://towardsdatascience.com/anatomy-of-a-parquet-file/",
+        "summary": "Parquet from scratch: A Python deep dive into a raw parquet file",
+        "author": "Kilian Ollivier",
+        "date": "2025-03-13T19:58:39-05:00",
+        "read_time": "10 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Fourier Transform Applications in Literary Analysis",
+        "url": "https://towardsdatascience.com/fourier-transform-applications-in-literary-analysis/",
+        "summary": "How mathematics and data analysis can offer a head start to analysing poetry, before even…",
+        "author": "Oliver W. Johnson",
+        "date": "2025-03-13T18:25:18-05:00",
+        "read_time": "11 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Mastering Hadoop, Part 2: Getting Hands-On — Setting Up and Scaling Hadoop",
+        "url": "https://towardsdatascience.com/mastering-hadoop-part-2-getting-hands-on-setting-up-and-scaling-hadoop/",
+        "summary": "Understanding Hadoop’s core components before installation and scaling",
+        "author": "Niklas Lang",
+        "date": "2025-03-13T15:42:01-05:00",
+        "read_time": "23 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "2026 Will Be The Year of Data + AI Observability",
+        "url": "https://towardsdatascience.com/2026-will-be-the-year-of-data-ai-observability/",
+        "summary": "Observations on performance and reliability from conversations with dozens of teams racing to productize enterprise…",
+        "author": "Barr Moses",
+        "date": "2025-03-13T14:10:05-05:00",
+        "read_time": "7 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "How to Make Your LLM More Accurate with RAG & Fine-Tuning",
+        "url": "https://towardsdatascience.com/how-to-make-your-llm-more-accurate-with-rag-fine-tuning/",
+        "summary": "And when to use which one",
+        "author": "Sarah Lea",
+        "date": "2025-03-11T13:05:00-05:00",
+        "read_time": "12 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "This Is How LLMs Break Down the Language",
+        "url": "https://towardsdatascience.com/this-is-how-llms-break-down-the-language/",
+        "summary": "The science and art behind tokenization",
+        "author": "Prashal Ruchiranga",
+        "date": "2025-03-10T09:01:07-05:00",
+        "read_time": "9 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Using GPT-4 for Personal Styling",
+        "url": "https://towardsdatascience.com/using-gpt-4-for-personal-styling/",
+        "summary": "Data management, GPT context limits, and real-world challenges",
+        "author": "Arielle Caron",
+        "date": "2025-03-07T13:57:52-05:00",
+        "read_time": "26 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "When You Just Can’t Decide on a Single Action",
+        "url": "https://towardsdatascience.com/when-you-just-cant-decide-on-a-single-action/",
+        "summary": "Game Theory 101: Mixing strategies",
+        "author": "Dorian Drost",
+        "date": "2025-03-07T13:01:37-05:00",
+        "read_time": "16 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Overcome Failing Document Ingestion & RAG Strategies with Agentic Knowledge Distillation",
+        "url": "https://towardsdatascience.com/overcome-failing-document-ingestion-rag-strategies-with-agentic-knowledge-distillation/",
+        "summary": "Introducing the pyramid search approach",
+        "author": "Tula Masterman",
+        "date": "2025-03-05T14:50:12-05:00",
+        "read_time": "17 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "From Fuzzy to Precise: How a Morphological Feature Extractor Enhances AI’s Recognition Capabilities",
+        "url": "https://towardsdatascience.com/from-fuzzy-to-precise-how-a-morphological-feature-extractor-enhances-ais-recognition-capabilities/",
+        "summary": "Mimicking human visual perception to truly understand objects",
+        "author": "Eric Chung",
+        "date": "2025-03-10T15:08:54-05:00",
+        "read_time": "22 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Image Captioning, Transformer Mode On",
+        "url": "https://towardsdatascience.com/image-captioning-transformer-mode-on/",
+        "summary": "Implementing CPTR (CaPtion TransformeR) from scratch with PyTorch",
+        "author": "Muhammad Ardi",
+        "date": "2025-03-07T13:47:02-05:00",
+        "read_time": "33 min read",
+        "page_found": 1,
+        "search_term": ""
+    },
+    {
+        "title": "Generative AI Is Declarative",
+        "url": "https://towardsdatascience.com/generative-ai-is-declarative/",
+        "summary": "And how to order a cheeseburger with an LLM",
+        "author": "Michael Herman",
+        "date": "2025-03-05T11:36:00-05:00",
+        "read_time": "28 min read",
+        "page_found": 1,
+        "search_term": ""
     }
 ]
