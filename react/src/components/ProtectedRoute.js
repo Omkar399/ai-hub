@@ -10,7 +10,13 @@ const ProtectedRoute = ({ children }) => {
         const checkAuth = async () => {
             try {
                 // Call the /auth/check endpoint to verify authentication
-                const response = await axios.get(`${API_BASE_URL}/auth/check`, { withCredentials: true });
+                const response = await axios.get(`${API_BASE_URL}/auth/check`, {
+                    withCredentials: true,
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                });
                 if (response.data.loggedIn) {
                     setIsAuthenticated(true); // User is authenticated
                 } else {

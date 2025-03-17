@@ -2,8 +2,12 @@ from flask import Blueprint, request, jsonify, session
 from app.models.user import User
 from app import db
 from flask_login import login_user, logout_user, current_user
+from flask_cors import CORS
 
 bp = Blueprint('auth', __name__)
+
+# Configure CORS for the blueprint
+CORS(bp, supports_credentials=True, origins=['*'])  # Replace with your actual frontend domain
 
 @bp.route('/register', methods=['POST'])
 def register():
