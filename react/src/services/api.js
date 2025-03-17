@@ -1,11 +1,43 @@
 import axios from 'axios';
 import { API_BASE_URL } from '../config';
 
-// Axios instance for reusable configuration
+// Create axios instance with default configuration
 const apiClient = axios.create({
     baseURL: API_BASE_URL,
-    timeout: 10000, // Set a timeout of 10 seconds
+    timeout: 10000,
+    withCredentials: true,
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
 });
+
+// Add request interceptor for debugging
+apiClient.interceptors.request.use(
+    config => {
+        console.log('Making request:', config.url);
+        return config;
+    },
+    error => {
+        console.error('Request error:', error);
+        return Promise.reject(error);
+    }
+);
+
+// Add response interceptor for handling errors
+apiClient.interceptors.response.use(
+    response => response,
+    error => {
+        if (error.response?.status === 401) {
+            console.log('Unauthorized access, redirecting to login');
+            localStorage.removeItem('user');
+            if (window.location.pathname !== '/login') {
+                window.location.href = '/login';
+            }
+        }
+        return Promise.reject(error);
+    }
+);
 
 // Helper function for handling errors
 const handleError = (error) => {
@@ -137,22 +169,42 @@ export const registerUser = async (userData) => {
 // Log in an existing user
 export const loginUser = async (credentials) => {
     try {
-        const response = await apiClient.post('/auth/login', credentials, { withCredentials: true });
-        return response.data; // Return user data and success message
+        const response = await apiClient.post('/auth/login', credentials);
+        if (response.data.user) {
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+        }
+        return response.data;
     } catch (error) {
-        handleError(error);
+        console.error('Login error:', error.response?.data || error.message);
+        throw error;
     }
 };
 
 // Log out the current user
 export const logoutUser = async () => {
     try {
-        await apiClient.post('/auth/logout');
-        localStorage.clear(); // Clear any stored data
-        sessionStorage.clear(); // Clear session storage if used
-        window.location.href = '/login'; /// Return success message if needed
+        const response = await apiClient.post('/auth/logout');
+        localStorage.removeItem('user');
+        localStorage.clear();
+        sessionStorage.clear();
+        return response.data;
     } catch (error) {
-        console.error('Error during logout:', error);
-        throw error; // Re-throw error for higher-level handling
+        console.error('Logout error:', error);
+        // Clear storage even if logout fails
+        localStorage.clear();
+        sessionStorage.clear();
+        throw error;
+    } finally {
+        window.location.href = '/login';
+    }
+};
+
+export const checkAuth = async () => {
+    try {
+        const response = await apiClient.get('/auth/check');
+        return response.data;
+    } catch (error) {
+        console.error('Auth check error:', error.response?.data || error.message);
+        return { loggedIn: false };
     }
 };
