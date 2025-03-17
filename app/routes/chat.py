@@ -44,18 +44,18 @@ def chat():
         return jsonify({"response": f"Error: {str(e)}"}), 500
 
 
-# def _build_cors_preflight_response():
-#     """Handles CORS preflight OPTIONS requests"""
-#     response = jsonify({"message": "CORS preflight successful"})
-#     response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
-#     response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
-#     response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-#     response.headers["Access-Control-Allow-Credentials"] = "true"
-#     return response, 200
+def _build_cors_preflight_response():
+    """Handles CORS preflight OPTIONS requests"""
+    response = jsonify({"message": "CORS preflight successful"})
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response, 200
 
 
-# def _corsify_actual_response(response):
-#     """Adds CORS headers to actual responses"""
-#     response.headers["Access-Control-Allow-Origin"] = "http://localhost:3000"
-#     response.headers["Access-Control-Allow-Credentials"] = "true"
-#     return response
+def _corsify_actual_response(response):
+    """Adds CORS headers to actual responses"""
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response
